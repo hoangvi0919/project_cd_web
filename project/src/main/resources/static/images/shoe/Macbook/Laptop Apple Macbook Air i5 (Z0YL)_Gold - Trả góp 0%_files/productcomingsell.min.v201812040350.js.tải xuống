@@ -1,0 +1,4 @@
+function LoadPreOrderCustomer(){if(GAME_PREORDER_CUSTOMER_BOX_CALLING_FLAG){if(GAME_PREORDER_CUSTOMER_BOX_CALLING_FLAG=!1,typeof $.fancybox=="undefined"){$.getScript("/Scripts/desktop/jquery/fancybox.js").done(function(){GAME_PREORDER_CUSTOMER_BOX_CALLING_FLAG=!0;LoadPreOrderCustomer()});return}var n={intProductID:productID,intCategoryID:cateID};POSTAjax("/aj/Game/ProductComingSellCustomer",n,BeforeSendAjax,function(n){(n!=null||n!="")&&($.fancybox.close(),$("#box-customer-luckydraw").remove(),$("body").append(n));$("#dlding").fadeOut(1e3);GAME_PREORDER_CUSTOMER_BOX_CALLING_FLAG=!0},ErrorAjax,!0)}}var GAME_PREORDER_CUSTOMER_BOX_CALLING_FLAG=!0;setTimeout(function(){$("#wrap_cart .register input").keyup(function(n){n.keyCode==13&&$(".xacnhan ").click()})},4e3);
+/*
+//# sourceMappingURL=productcomingsell.min.js.map
+*/

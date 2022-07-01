@@ -1,0 +1,173 @@
+#form {
+    width: 560px;
+    margin: auto;
+
+}
+
+#form p {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.input {
+    margin-bottom: 10px;
+    position: relative;
+    color: black;
+
+}
+
+.placeholder {
+    user-select: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: text;
+}
+
+.input input,
+.input textarea {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    font-size: 16px;
+    padding: 0px 15px;
+    padding-top: 10px;
+}
+
+
+.input .placeholder,
+.input .pass {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.input .placeholder {
+    left: 15px;
+}
+
+.input .pass {
+    right: 10px;
+}
+
+.input input:focus~.placeholder,
+.input input:valid~.placeholder,
+.input textarea:focus~.placeholder,
+.input textarea:valid~.placeholder {
+    top: 15px;
+    font-size: 16px;
+}
+
+#txtaddress {
+    max-width: 500px;
+    min-height: 50px;
+}
+
+#place-datepicker {
+    top: 15px;
+    font-size: 16px;
+}
+#datepicker{
+    cursor: text;
+}
+
+#eye {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#btndk {
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin: 10px auto;
+    background-color: rgb(42,195,125);
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
+#btndk:hover{
+    background-color: rgb(36,170,109);
+}
+
+#linkdn {
+    color: blue;
+}
+
+#linkdn:hover {
+    text-decoration: underline;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 345px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    zoom: 1;
+}
+
+input[type="radio"]+label {
+    width: 100%;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: aliceblue;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    float: left;
+    border-radius: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="radio"]+label:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+input[type="radio"]+label:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+input[type="radio"]+label i {
+    padding-right: 0.4em;
+}
+
+input[type="radio"]:checked+label {
+    background-color: rgb(42,195,125) !important;
+    color: #fff;
+    border-color: rgb(42,195,125) !important;
+}
