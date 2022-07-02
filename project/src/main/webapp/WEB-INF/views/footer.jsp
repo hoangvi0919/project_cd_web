@@ -73,7 +73,7 @@
         <div class="ps-container">
             <div class="row">
                 <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12 " >
-                    <p style="text-align: center">&copy; <a href="#">LAPTOPNLU</a>. Design by <a href="#"> Group 02-LTWEB</a></p>
+                    <p style="text-align: center">&copy;2022 <a href="#">LAPTOPNLU</a>. Design by <a href="#"> Group chuyên đề Web</a></p>
                 </div>
 
             </div>
