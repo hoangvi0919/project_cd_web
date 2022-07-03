@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +6,7 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
 
     <!-- Title Page-->
     <title>Thêm Nhà PP</title>
@@ -42,8 +41,8 @@
         <div class="header-mobile__bar">
             <div class="container-fluid">
                 <div class="header-mobile-inner">
-                    <a class="logo" href="index.html">
-                        <img src="images/icon/logo.png" alt="CoolAdmin"/>
+                    <a class="logo" href="thongke_manage">
+                        <img src="images/icon/logo.png" alt="CoolAdmin" />
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -57,7 +56,7 @@
             <div class="container-fluid">
                 <ul class="list-unstyled navbar__list">
                     <li class="has-sub">
-                        <a class="js-arrow" href="index.html">
+                        <a class="js-arrow" href="thongke_manage">
                             <i class="fas fa-tachometer-alt"></i>Thống kê</a>
 
                     <li class="has-sub">
@@ -65,11 +64,11 @@
                             <i class="fas fa-tags"></i>Sản phẩm</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_SanPham.html"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
+                                <a href="product_manage"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
                             </li>
 
                             <li>
-                                <a href="Add_SP.html"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
+                                <a href="add_product"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
                             </li>
                         </ul>
                     </li>
@@ -79,10 +78,10 @@
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
 
                             <li>
-                                <a href="QL_KM.html"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
+                                <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
                             </li>
                             <li>
-                                <a href="Add_KM.html"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
+                                <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
                             </li>
                         </ul>
                     </li>
@@ -91,22 +90,22 @@
                             <i class="far fa-copy"></i>Đơn hàng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_DonHang.html"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
+                                <a href="order_manage"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
                             </li>
                             <li>
-                                <a href="Add_DH.html"><i class="fas fa-plus-circle"></i>Thêm đơn hàng</a>
+                                <a href="add_order"><i class="fas fa-plus-circle"></i>Thêm đơn hàng</a>
                             </li>
                         </ul>
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-home"></i>Nhà sản xuất</a>
+                            <i class="fas fa-home"></i>Nhà cung cấp</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_NSX.html"><i class="fas fa-list-ul"></i>Danh mục nhà sản xuất</a>
+                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục Nhà cung cấp</a>
                             </li>
                             <li>
-                                <a href="Add_Company.html"><i class="fas fa-plus-circle"></i>Thêm nhà sản xuất</a>
+                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm Nhà cung cấp</a>
                             </li>
                         </ul>
                     </li>
@@ -115,17 +114,16 @@
                             <i class="fas fa-user"></i>Người dùng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_User.html"><i
-                                        class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
+                                <a href="user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
                             </li>
                             <li>
-                                <a href="Add_User.html"><i class="fas fa-plus-circle"></i>Thêm admin</a>
+                                <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="QL_banner.html">
-                            <i class="fas fa-calendar-alt"></i>Quản lí banner</a>
+                        <a href="banner_manage">
+                            <i class="fas fa-calendar-alt"></i>Quản lí ảnh</a>
                     </li>
                 </ul>
             </div>
@@ -136,14 +134,14 @@
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="#">
-                <img src="images/icon/logo.png" alt="Cool Admin"/>
+                <img src="images/icon/logo.png" alt="Cool Admin" />
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">
             <nav class="navbar-sidebar">
                 <ul class="list-unstyled navbar__list">
                     <li class="has-sub">
-                        <a class="js-arrow" href="index.html">
+                        <a class="js-arrow" href="thongke">
                             <i class="fas fa-tachometer-alt"></i>Thống kê</a>
 
                     <li class="has-sub">
@@ -151,11 +149,11 @@
                             <i class="fas fa-tags"></i>Sản phẩm</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_SanPham.html"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
+                                <a href="product_manage"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
                             </li>
 
                             <li>
-                                <a href="Add_SP.html"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
+                                <a href="add_produc"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
                             </li>
                         </ul>
                     </li>
@@ -165,10 +163,10 @@
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
 
                             <li>
-                                <a href="QL_KM.html"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
+                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
                             </li>
                             <li>
-                                <a href="Add_KM.html"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
+                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
                             </li>
                         </ul>
                     </li>
@@ -177,22 +175,22 @@
                             <i class="far fa-copy"></i>Đơn hàng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_DonHang.html"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
+                                <a href="order_manage"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
                             </li>
                             <li>
-                                <a href="SuaDH.html"><i class="fas fa-edit"></i>Sửa đơn hàng</a>
+                                <a href="edit_order"><i class="fas fa-edit"></i>Sửa đơn hàng</a>
                             </li>
                         </ul>
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-home"></i>Nhà sản xuất</a>
+                            <i class="fas fa-home"></i>Nhà cung cấp</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_NSX.html"><i class="fas fa-list-ul"></i>Danh mục nhà sản xuất</a>
+                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục Nhà cung cấp</a>
                             </li>
                             <li>
-                                <a href="Add_Company.html"><i class="fas fa-plus-circle"></i>Thêm nhà sản xuất</a>
+                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm Nhà cung cấp</a>
                             </li>
                         </ul>
                     </li>
@@ -201,23 +199,22 @@
                             <i class="fas fa-user"></i>Người dùng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_User.html"><i
-                                        class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
+                                <a href="user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
                             </li>
                             <li>
-                                <a href="Add_User.html"><i class="fas fa-plus-circle"></i>Thêm admin</a>
+                                <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
                             </li>
                         </ul>
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-newspaper"></i>Quản lí banner</a>
+                            <i class="fas fa-newspaper"></i>Quản lí ảnh</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_banner.html"><i class="fas fa-list-ul"></i><span>Danh mục banner</span></a>
+                                <a href="banner_manage"><i class="fas fa-list-ul"></i><span>Danh mục ảnh</span></a>
                             </li>
                             <li>
-                                <a href="Add_banner.html"><i class="fas fa-plus-circle"></i>Thêm banner</a>
+                                <a href="add_banner"><i class="fas fa-plus-circle"></i>Thêm ảnh</a>
                             </li>
                         </ul>
                     </li>
@@ -236,7 +233,7 @@
                 <div class="container-fluid">
                     <div class="header-wrap">
                         <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..."/>
+                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
                             <button class="au-btn--submit" type="submit">
                                 <i class="zmdi zmdi-search"></i>
                             </button>
@@ -246,7 +243,7 @@
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="images/icon/avatar-01.jpg" alt="John Doe"/>
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                     </div>
                                     <div class="content">
                                         <a class="js-acc-btn" href="#">Ana Nguyễn</a>
@@ -255,7 +252,7 @@
                                         <div class="info clearfix">
                                             <div class="image">
                                                 <a href="#">
-                                                    <img src="images/icon/avatar-01.jpg" alt="John Doe"/>
+                                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                                 </a>
                                             </div>
                                             <div class="content">
@@ -303,50 +300,40 @@
                         <div class="col-lg-10 " style="margin: auto">
                             <div class="card">
                                 <div class="card-header" style="text-align: center">
-                                    <strong style="font-size: 25PX">SỬA THÔNG TIN NHÀ SẢN XUẤT</strong>
+                                    <strong style="font-size: 25PX">Thêm nhà cung cấp</strong>
                                 </div>
                                 <div class="card-body card-block">
                                     <div class="form-group">
-                                        <label for="id_company" class=" form-control-label">Tên NSX:</label>
-                                        <input type="text" id="id_company" VALUE="NCC03" placeholder="Nhập mã NSX..."
+                                        <label for="id_company" class=" form-control-label">Mã NSX:</label>
+                                        <input type="text" id="id_company" placeholder="Nhập mã NSX..."
                                                class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="company" class=" form-control-label">Tên NSX:</label>
-                                        <input type="text" id="company" value="Cty CP Strawberry"
-                                               placeholder="Nhập tên NSX..."
+                                        <input type="text" id="company" placeholder="Nhập tên NSX..."
                                                class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="vat" class=" form-control-label">VAT</label>
-                                        <input type="text" id="vat" value="DE1234567890" placeholder="DE1234567890"
-                                               class="form-control">
+                                        <input type="text" id="vat" placeholder="DE1234567890" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="street" class=" form-control-label">Đường:</label>
-                                        <input type="text" id="street" value="Võ Thị Sáu" placeholder="Nhập tên đường"
-                                               class="form-control">
+                                        <label for="address" class=" form-control-label">Địa chỉ:</label>
+                                        <textarea type="text" id="address" placeholder="Nhập địa chỉ"
+                                               class="form-control" row="5"></textarea> 
                                     </div>
 
 
-                                    <div class=" form-group">
-                                        <label for="city" class=" form-control-label">Thành phố/ Tỉnh:</label>
-                                        <input type="text" id="city" value="TP HCM"
-                                               placeholder="Nhập tên thành phố hoặc tỉnh..."
-                                               class="form-control">
-
-                                    </div>
+                                    
 
                                     <div class=" form-group">
                                         <label for="postal-code" class=" form-control-label">SĐT:</label>
-                                        <input type="text" id="postal-code" value="0296.111.222"
-                                               placeholder="Nhập SĐT..."
+                                        <input type="number" id="postal-code" placeholder="Nhập SĐT..."
                                                class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label for="date-input" class=" form-control-label">Ngày bắt đầu:</label>
-                                        <input type="date" id="date-input" value="2017-11-24" name="date-input"
-                                               placeholder=""
+                                        <input type="date" id="date-input" name="date-input" placeholder=""
                                                class="form-control">
 
                                     </div>
@@ -359,36 +346,36 @@
                                             <div class="form-check">
                                                 <div class="checkbox">
                                                     <label for="checkbox1" class="form-check-label ">
-                                                        <input type="checkbox" id="checkbox1" checked="checked"
-                                                               name="checkbox1" value="option1"
-                                                               class="form-check-input">ASUS
+                                                        <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">ASUS
                                                     </label>
                                                 </div>
+
                                                 <div class="checkbox">
                                                     <label for="checkbox2" class="form-check-label ">
-                                                        <input type="checkbox" id="checkbox2" checked="checked"
-                                                               name="checkbox2" value="option2"
-                                                               class="form-check-input"> DELL
+                                                        <input type="checkbox" id="checkbox2" name="checkbox2" value="option2" class="form-check-input"> DELL
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label for="checkbox3" class="form-check-label ">
-                                                        <input type="checkbox" id="checkbox3" name="checkbox3"
-                                                               value="option3" class="form-check-input"> ACER
+                                                        <input type="checkbox" id="checkbox3" name="checkbox3" value="option3" class="form-check-input"> ACER
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label for="checkbox3" class="form-check-label ">
-                                                        <input type="checkbox" id="checkbox4" name="checkbox4"
-                                                               value="option4" class="form-check-input"> HP
+                                                    <label for="checkbox4" class="form-check-label ">
+                                                        <input type="checkbox" id="checkbox4" name="checkbox4" value="option4" class="form-check-input"> HP
                                                     </label>
                                                 </div>
                                                 <div class="checkbox">
-                                                    <label for="checkbox3" class="form-check-label ">
-                                                        <input type="checkbox" id="checkbox5" name="checkbox5"
-                                                               value="option5" class="form-check-input"> APPLE
+                                                    <label for="checkbox5" class="form-check-label ">
+                                                        <input type="checkbox" id="checkbox5" name="checkbox5" value="option5" class="form-check-input"> APPLE
                                                     </label>
                                                 </div>
+                                                <div class="checkbox">
+                                                    <label for="checkbox6" class="form-check-label ">
+                                                        <input type="checkbox" id="checkbox6" name="checkbox6" value="option5" class="form-check-input"> LENOVO
+                                                    </label>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -396,10 +383,10 @@
                                 </div>
                                 <div class="card-footer" style="text-align: center">
                                     <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Lưu
+                                        <i class="fa fa-dot-circle-o"></i> Thêm
                                     </button>
                                     <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Hủy
+                                        <i class="fa fa-ban"></i> Reset
                                     </button>
                                 </div>
 
@@ -410,7 +397,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2022 LaptopNLU. Thiết kế bởi <a href="#">Group chuyên đề web</a>.</p>
+                                <p>Copyright © 2020 LaptopNLU. Thiết kế bởi <a href="#">Group 02-LTWEB</a>.</p>
                             </div>
                         </div>
                     </div>

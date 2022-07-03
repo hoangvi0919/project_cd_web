@@ -58,11 +58,11 @@
 
                     <tr>
                         <td>Sản phẩm</td>
-                        <td><a class="ps-product__preview text-uppercase" href="product-detail.html"><img class="mr-15"
+                        <td><a class="ps-product__preview text-uppercase" href="product-detail"><img class="mr-15"
                                                                                                           src="images/cart-preview/3.jpg"
                                                                                                           alt=""> Asus
                             VivoBook A412FA</a></td>
-                        <td><a class="ps-product__preview text-uppercase" href="product-detail.html"><img class="mr-15"
+                        <td><a class="ps-product__preview text-uppercase" href="product-detail"><img class="mr-15"
                                                                                                           src="images/cart-preview/3.jpg"
                                                                                                           alt=""> Acer
                             Swift 3 SF314 54 51QL</a></td>

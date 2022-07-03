@@ -65,7 +65,7 @@
                     </thead>
                     <tbody>
                     <tr class="product1" id="product1">
-                        <td><a class="ps-product__preview" href="product-detail.jsp"><img class="mr-15"
+                        <td><a class="ps-product__preview" href="product-detail"><img class="mr-15"
                                                                                           src="images/cart-preview/1.jpg"
                                                                                           alt=""> Laptop ASUS VivoBook
                             A412FA i5 </a></td>
@@ -83,7 +83,7 @@
                         </td>
                     </tr>
                     <tr class="product2">
-                        <td><a class="ps-product__preview" href="product-detail.jsp"><img class="mr-15"
+                        <td><a class="ps-product__preview" href="product-detail"><img class="mr-15"
                                                                                           src="images/cart-preview/2.jpg"
                                                                                           alt=""> Dell Inspiron 5584 i5
                             8265U</a></td>
@@ -101,7 +101,7 @@
                         </td>
                     </tr>
                     <tr class="product3">
-                        <td><a class="ps-product__preview" href="product-detail.jsp"><img class="mr-15"
+                        <td><a class="ps-product__preview" href="product-detail"><img class="mr-15"
                                                                                           src="images/cart-preview/3.jpg"
                                                                                           alt="">Dell Vostro 3590 i7
                             10510U</a></td>
@@ -123,13 +123,13 @@
                 <div class="ps-cart__actions">
                     <div class="ps-cart__promotion">
                         <div class="form-group">
-                            <button onclick="window.location.href='product-listing.jsp'" class="ps-btn ps-btn--gray">
+                            <button onclick="window.location.href='product-listing'" class="ps-btn ps-btn--gray">
                                 Tiếp tục mua sắm
                             </button>
                         </div>
                     </div>
                     <div class="ps-cart__total">
-                        <h3>Tổng cộng: <span id="total"> 9,000,000</span></h3><a class="ps-btn" href="checkout.jsp">Thanh
+                        <h3>Tổng cộng: <span id="total"> 9,000,000</span></h3><a class="ps-btn" href="checkout">Thanh
                         toán<i class="ps-icon-next"></i></a>
                     </div>
                 </div>

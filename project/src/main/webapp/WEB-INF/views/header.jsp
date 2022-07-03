@@ -50,16 +50,16 @@
                 </div>
                 <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
                     <div class="header__actions">
-                        <a href="register.jsp">ĐĂNG KÝ
+                        <a href="register">ĐĂNG KÝ
                         </a>
                     </div>
                     <div class="header__actions">
-                        <a href="index.jsp">
+                        <a href="index">
                             Đăng Xuất
                         </a>
                     </div>
                     <div class="header__actions">
-                        <a href="login.jsp" >
+                        <a href="login" >
                             ĐĂNG NHẬP
                         </a>
                     </div>
@@ -70,19 +70,19 @@
         <nav class="navigation">
             <div class="container-fluid">
                 <div class="navigation__column left">
-                    <div class="header__logo"><a class="ps-logo" href="index.jsp"><img src="images/logo1.png" alt=""></a></div>
+                    <div class="header__logo"><a class="ps-logo" href="index"><img src="images/logo1.png" alt=""></a></div>
                 </div>
                 <div class="navigation__column center">
                     <ul class="main-menu menu">
                         <li class="menu-item">
                             <i class="fas fa-home"></i>
-                            <a href="index.jsp">TRANG CHỦ</a>
+                            <a href="index">TRANG CHỦ</a>
                         </li>
-                        <li class="menu-item"><a href="about.jsp">GIỚI THIỆU</a> </li>
+                        <li class="menu-item"><a href="about">GIỚI THIỆU</a> </li>
 
-                        <li class="menu-item menu-item-has-children dropdown"><a href="product-listing.jsp">SẢN PHẨM</a>
+                        <li class="menu-item menu-item-has-children dropdown"><a href="product-listing">SẢN PHẨM</a>
                             <ul class="sub-menu">
-                                <li class="menu-item"><a href="acer-list.jsp">Acer</a></li>
+                                <li class="menu-item"><a href="acer-list">Acer</a></li>
                                 <li class="menu-item"><a>Asus</a></li>
                                 <li class="menu-item"><a>Lenovo</a></li>
                                 <li class="menu-item"><a>Dell</a></li>
@@ -90,7 +90,7 @@
                                 <li class="menu-item"><a>Macbook</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="contact-us.jsp">Liên Hệ</a></li>
+                        <li class="menu-item"><a href="contact-us">Liên Hệ</a></li>
 
                         <li class="menu-item menu-item-has-children dropdown">
 <%--                            <a><%=u!=null?"TÀI KHOẢN":""%></a>--%>
@@ -108,25 +108,25 @@
                         <input class="form-control" type="text" placeholder="Tìm kiếm sản phẩm...">
                         <button><i class="ps-icon-search"></i></button>
                     </form>
-                    <div class="ps-cart"><a class="ps-cart__toggle" href="cart.jsp"><i class="ps-icon-shopping-cart"></i></a>
+                    <div class="ps-cart"><a class="ps-cart__toggle" href="cart"><i class="ps-icon-shopping-cart"></i></a>
                         <div class="ps-cart__listing">
                             <div class="ps-cart__content">
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                                    <div class="ps-cart-item__thumbnail"><a href="product-detail.jsp"></a><img src="images/cart-preview/1.jpg" alt=""></div>
-                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.jsp">Asus vivobook A412FA
+                                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="images/cart-preview/1.jpg" alt=""></div>
+                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">Asus vivobook A412FA
                                     </a>
                                         <p style="color: white; font-weight: bold;" ><span>SL:<i>1</i></span><span>Giá:<i>4 000 000đ</i></span></p>
                                     </div>
                                 </div>
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                                    <div class="ps-cart-item__thumbnail"><a href="product-detail.jsp"></a><img src="images/cart-preview/2.jpg" alt=""></div>
-                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.jsp">Dell Inspiron 5584 I5 8265U</a>
+                                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="images/cart-preview/2.jpg" alt=""></div>
+                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">Dell Inspiron 5584 I5 8265U</a>
                                         <p style="color: white; font-weight: bold;"><span>SL:<i>1</i></span><span>Giá:<i>2 000 000đ</i></span></p>
                                     </div>
                                 </div>
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                                    <div class="ps-cart-item__thumbnail"><a href="product-detail.jsp"></a><img src="images/cart-preview/3.jpg" alt=""></div>
-                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.jsp">Dell Vostro 3590 I7 10510U</a>
+                                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="images/cart-preview/3.jpg" alt=""></div>
+                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">Dell Vostro 3590 I7 10510U</a>
                                         <p style="color: white; font-weight: bold;"><span>SL:<i>1</i></span><span>Giá:<i>3 000 000đ</i></span></p>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@
                                 <p style="color: white; font-weight: bold;">Tổng SL:<span>3</span></p>
                                 <p style="color: white; font-weight: bold;">Tổng tiền:<span>9 000 000đ</span></p>
                             </div>
-                            <div class="ps-cart__footer"><a class="ps-btn" href="cart.jsp">Giỏ hàng<i class="ps-icon-arrow-left"></i></a></div>
+                            <div class="ps-cart__footer"><a class="ps-btn" href="cart">Giỏ hàng<i class="ps-icon-arrow-left"></i></a></div>
                         </div>
                     </div>
                     <div class="menu-toggle"><span></span></div>

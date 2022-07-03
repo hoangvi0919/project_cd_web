@@ -51,8 +51,8 @@
                     <p>6 QL1A, Khu phố 1, Dĩ An, Bình Dương-  Hotline: 0385190234 </p>
                 </div>
                 <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
-                    <div class="header__actions"><a href="register.html">Đăng ký</a>
-                        <div class="header__actions"><a href="login.html">Đăng nhập</a>
+                    <div class="header__actions"><a href="register">Đăng ký</a>
+                        <div class="header__actions"><a href="login">Đăng nhập</a>
 
                         </div>
                     </div>
@@ -62,19 +62,19 @@
         <nav class="navigation">
             <div class="container-fluid">
                 <div class="navigation__column left">
-                    <div class="header__logo"><a class="ps-logo" href="index.html"><img src="images/logo1.png" alt=""></a></div>
+                    <div class="header__logo"><a class="ps-logo" href="index"><img src="images/logo1.png" alt=""></a></div>
                 </div>
                 <div class="navigation__column center">
                     <ul class="main-menu menu">
                         <li class="menu-item">
                             <i class="fas fa-home"></i>
-                            <a href="index.html">TRANG CHỦ</a>
+                            <a href="index">TRANG CHỦ</a>
                         </li>
-                        <li class="menu-item"><a href="about.html">GIỚI THIỆU</a> </li>
+                        <li class="menu-item"><a href="about">GIỚI THIỆU</a> </li>
 
-                        <li class="menu-item menu-item-has-children dropdown"><a href="product-listing.html">SẢN PHẨM</a>
+                        <li class="menu-item menu-item-has-children dropdown"><a href="product-detail">SẢN PHẨM</a>
                             <ul class="sub-menu">
-                                <li class="menu-item"><a href="acer-list.html">Acer</a></li>
+                                <li class="menu-item"><a>Acer</a></li>
                                 <li class="menu-item"><a>Asus</a></li>
                                 <li class="menu-item"><a>Lenovo</a></li>
                                 <li class="menu-item"><a>Dell</a></li>
@@ -82,7 +82,7 @@
                                 <li class="menu-item"><a>Macbook</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="contact-us.html">Liên Hệ</a></li>
+                        <li class="menu-item"><a href="contact-us">Liên Hệ</a></li>
                     </ul>
                 </div>
                 <div class="navigation__column right">
@@ -94,21 +94,21 @@
                         <div class="ps-cart__listing">
                             <div class="ps-cart__content">
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                                    <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/1.jpg" alt=""></div>
-                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Asus vivobook A412FA
+                                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="images/cart-preview/1.jpg" alt=""></div>
+                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">Asus vivobook A412FA
                                     </a>
                                         <p style="color: white; font-weight: bold;" ><span>SL:<i>1</i></span><span>Giá:<i>4 000 000đ</i></span></p>
                                     </div>
                                 </div>
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                                    <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/2.jpg" alt=""></div>
-                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Dell Inspiron 5584 I5 8265U</a>
+                                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="images/cart-preview/2.jpg" alt=""></div>
+                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">Dell Inspiron 5584 I5 8265U</a>
                                         <p style="color: white; font-weight: bold;"><span>SL:<i>1</i></span><span>Giá:<i>2 000 000đ</i></span></p>
                                     </div>
                                 </div>
                                 <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                                    <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/3.jpg" alt=""></div>
-                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Dell Vostro 3590 I7 10510U</a>
+                                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="images/cart-preview/3.jpg" alt=""></div>
+                                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">Dell Vostro 3590 I7 10510U</a>
                                         <p style="color: white; font-weight: bold;"><span>SL:<i>1</i></span><span>Giá:<i>3 000 000đ</i></span></p>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                 <p style="color: white; font-weight: bold;">Tổng SL:<span>3</span></p>
                                 <p style="color: white; font-weight: bold;">Tổng tiền:<span>9 000 000đ</span></p>
                             </div>
-                            <div class="ps-cart__footer"><a class="ps-btn" href="cart.html">Thanh toán ngay<i class="ps-icon-arrow-left"></i></a></div>
+                            <div class="ps-cart__footer"><a class="ps-btn" href="cart">Thanh toán ngay<i class="ps-icon-arrow-left"></i></a></div>
                         </div>
                     </div>
                     <div class="menu-toggle"><span></span></div>
@@ -164,7 +164,7 @@
                                 <div class="ps-shoe mb-30">
                                     <div class="ps-shoe__thumbnail">
                                         <div class="ps-badge"><span>Mới</span></div>
-                                        <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><img src="images/shoe/acer/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                        <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><img src="images/shoe/acer/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                                     </div>
                                     <br/><br/><br/>
                                     <div class="ps-shoe__content">
@@ -189,7 +189,7 @@
                         <div class="grid-item nike">
                             <div class="grid-item__content-wrapper">
                                 <div class="ps-shoe mb-30">
-                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/hp/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/hp/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                                     </div>
                                     <br/><br/>
                                     <div class="ps-shoe__content">
@@ -214,7 +214,7 @@
                         <div class="grid-item adidas">
                             <div class="grid-item__content-wrapper">
                                 <div class="ps-shoe mb-30">
-                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/dell/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/dell/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                                     </div>
                                     <br/><br/>
                                     <div class="ps-shoe__content">
@@ -240,7 +240,7 @@
                             <div class="grid-item__content-wrapper">
                                 <div class="ps-shoe mb-30">
                                     <div class="ps-shoe__thumbnail">
-                                        <div class="ps-badge ps-badge--sale"><span>-35%</span></div><img src="images/shoe/Lenovo/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                        <div class="ps-badge ps-badge--sale"><span>-35%</span></div><img src="images/shoe/Lenovo/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                                     </div>
                                     <br/><br/>
                                     <div class="ps-shoe__content">
@@ -268,7 +268,7 @@
                             <div class="grid-item__content-wrapper">
                                 <div class="ps-shoe mb-30">
                                     <br/>
-                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/asus/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/asus/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                                     </div>
                                     <br/><br/>
                                     <div class="ps-shoe__content">
@@ -295,7 +295,7 @@
                             <div class="grid-item__content-wrapper">
                                 <div class="ps-shoe mb-30">
                                     <br/>
-                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/Macbook/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/Macbook/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                                     </div>
                                     <br/><br/>
                                     <div class="ps-shoe__content">
@@ -320,7 +320,7 @@
                             <div class="grid-item__content-wrapper">
                                 <div class="ps-shoe mb-30">
                                     <br/>
-                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/hp2/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/hp2/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                                     </div>
                                     <br/><br/>
                                     <div class="ps-shoe__content">
@@ -344,7 +344,7 @@
                         <div class="grid-item kids">
                             <div class="grid-item__content-wrapper">
                                 <div class="ps-shoe mb-30">
-                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/hp3/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                    <div class="ps-shoe__thumbnail"><img src="images/shoe/hp3/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                                     </div>
                                     <br/><br/>
                                     <div class="ps-shoe__content">
@@ -371,8 +371,8 @@
         </div>
     </div>
     <div class="ps-section--offer">
-        <div class="ps-column"><a class="ps-offer" href="product-listing.html"><img src="images/banner/banner1.png" alt=""></a></div>
-        <div class="ps-column"><a class="ps-offer" href="product-listing.html"><img src="images/banner/banner2.png" alt=""></a></div>
+        <div class="ps-column"><a class="ps-offer" href="product-detail"><img src="images/banner/banner1.png" alt=""></a></div>
+        <div class="ps-column"><a class="ps-offer" href="product-detail"><img src="images/banner/banner2.png" alt=""></a></div>
     </div>
     <div class="ps-section--sale-off ps-section pt-80 pb-40">
         <div class="ps-container">
@@ -430,7 +430,7 @@
                     <div class="ps-shoes--carousel">
                         <div class="ps-shoe">
                             <div class="ps-shoe__thumbnail">
-                                <div class="ps-badge"><span>Mới</span></div><img src="images/shoe/BanChayNhat/asus/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                <div class="ps-badge"><span>Mới</span></div><img src="images/shoe/BanChayNhat/asus/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                             </div>
                             <br/><br/>
                             <div class="ps-shoe__content">
@@ -444,7 +444,7 @@
                                         <option value="2">5</option>
                                     </select>
                                 </div>
-                                <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Laptop Asus VivoBook X509MA N5030</a>
+                                <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detail">Laptop Asus VivoBook X509MA N5030</a>
                                     <p>RAM:4GB - HDD:1000GB<br/><strong class="ps-product__price">11 090 000đ</strong></p>
                                 </div>
                             </div>
@@ -454,7 +454,7 @@
                         <div class="ps-shoe">
                             <div class="ps-shoe__thumbnail">
                                 <div class="ps-badge"><span>Mới</span></div>
-                                <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><img src="images/shoe/BanChayNhat/hp/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><img src="images/shoe/BanChayNhat/hp/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                             </div>
                             <br/><br>
                             <div class="ps-shoe__content">
@@ -468,7 +468,7 @@
                                         <option value="2">5</option>
                                     </select>
                                 </div>
-                                <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Laptop HP 348 G7 i3 8130U</a>
+                                <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detail">Laptop HP 348 G7 i3 8130U</a>
                                     <p >
                                         RAM:4G-SSD:256GB<br/><del> 12 890 000 đ</del><strong class="ps-product__price"> 8 990 000 đ </strong>
                                     </p>
@@ -478,7 +478,7 @@
                     </div>
                     <div class="ps-shoes--carousel">
                         <div class="ps-shoe">
-                            <div class="ps-shoe__thumbnail"><img src="images/shoe/hp2/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                            <div class="ps-shoe__thumbnail"><img src="images/shoe/hp2/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                             </div>
                             <br/><br/>
                             <div class="ps-shoe__content">
@@ -500,7 +500,7 @@
                     </div>
                     <div class="ps-shoes--carousel">
                         <div class="ps-shoe">
-                            <div class="ps-shoe__thumbnail"><img src="images/shoe/asus/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                            <div class="ps-shoe__thumbnail"><img src="images/shoe/asus/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                             </div>
                             <br/><br/>
                             <div class="ps-shoe__content">
@@ -524,7 +524,7 @@
                     <div class="ps-shoes--carousel">
                         <div class="ps-shoe">
                             <div class="ps-shoe__thumbnail">
-                                <div class="ps-badge"><span>Mới</span></div><img src="images/shoe/5.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                                <div class="ps-badge"><span>Mới</span></div><img src="images/shoe/5.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                             </div>
                             <br/><br/>
                             <div class="ps-shoe__content">
@@ -538,7 +538,7 @@
                                         <option value="2">5</option>
                                     </select>
                                 </div>
-                                <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Laptop ASUS VIVOBOOK A412FA</a>
+                                <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detail">Laptop ASUS VIVOBOOK A412FA</a>
                                     <p>RAM:8GB - SSD:256GB<br/><del> 16 000 000 đ </del><strong class="ps-product__price">14 999 000đ  </strong>
                                     </p>
                                 </div>
@@ -547,7 +547,7 @@
                     </div>
                     <div class="ps-shoes--carousel">
                         <div class="ps-shoe">
-                            <div class="ps-shoe__thumbnail"><img src="images/shoe/acer/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                            <div class="ps-shoe__thumbnail"><img src="images/shoe/acer/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                             </div>
                             <br/>
                             <br/>
@@ -562,7 +562,7 @@
                                         <option value="2">5</option>
                                     </select>
                                 </div>
-                                <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detai.html">Laptop Acer Aspire 3 A315 54K 37B0 i3 8130U</a>
+                                <div class="ps-shoe__detail"><a class="ps-shoe__name" href="product-detail">Laptop Acer Aspire 3 A315 54K 37B0 i3 8130U</a>
                                     <p>RAM:4GB - SSD:256GB<br/>
                                         <strong class="ps-product__price">9 990 000 đ</strong>
                                     </p>
@@ -645,10 +645,10 @@
                             </header>
                             <footer>
                                 <ul class="ps-list--link">
-                                    <li><a href="index.html">TRANG CHỦ</a></li>
-                                    <li><a href="about.html">GIỚI THIỆU</a></li>
-                                    <li><a href="product-listing.html">SẢN PHẨM</a></li>
-                                    <li><a href="contact-us.html">LIÊN HỆ</a></li>
+                                    <li><a href="index">TRANG CHỦ</a></li>
+                                    <li><a href="about">GIỚI THIỆU</a></li>
+                                    <li><a href="product-listing">SẢN PHẨM</a></li>
+                                    <li><a href="contact-us">LIÊN HỆ</a></li>
                                 </ul>
                             </footer>
                         </aside>

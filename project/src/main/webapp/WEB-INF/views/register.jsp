@@ -113,7 +113,7 @@
                     <div class="placeholder" id="place-datepicker">Ngày sinh</div>
                 </div>
                 <button id="btndk">Đăng ký</button>
-                <p class="text-center">Bạn đã có tài khoản? <a href="./login.jsp" id="linkdn">Đăng nhập</a></p>
+                <p class="text-center">Bạn đã có tài khoản? <a href="./login" id="linkdn">Đăng nhập</a></p>
             </form>
         </div>
     </div>

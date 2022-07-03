@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+
 
     <title>LaptopNLU-EditInformation</title>
     <!-- Fonts-->
@@ -28,9 +28,7 @@
     <link rel="stylesheet" href="plugins/revolution/css/navigation.css">
     <!-- Custom-->
     <link rel="stylesheet" href="css/style.css">
-    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
-    <!--WARNING: Respond.js doesn't work if you view the page via file://-->
-    <!--[if lt IE 9]>
+        <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
     <!-- Fontfaces CSS-->
@@ -38,7 +36,7 @@
     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <!-- Vendor CSS-->
-    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+<%--    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">--%>
     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
     <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
     <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
@@ -77,7 +75,7 @@
                         <h2>Thay đổi thông tin</h2>
                     </div>
                     <div class="login-form title-edit-info">
-                        <form action="Edit_InformationUser" method="post">
+                        <form action="" method="post">
                             <div class="form-group">
                                 <label>Tên người dùng:</label>
                                 <input name="name" value=""

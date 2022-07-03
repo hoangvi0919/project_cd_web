@@ -60,7 +60,7 @@
         <div class="header-mobile__bar">
             <div class="container-fluid">
                 <div class="header-mobile-inner">
-                    <a class="logo" href="index.html">
+                    <a class="logo" href="thongke_manage">
                         <img src="images/icon/logo.png" alt="CoolAdmin" />
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
@@ -75,7 +75,7 @@
             <div class="container-fluid">
                 <ul class="list-unstyled navbar__list">
                     <li class="has-sub">
-                        <a class="js-arrow" href="index.html">
+                        <a class="js-arrow" href="thongke_manage">
                             <i class="fas fa-tachometer-alt"></i>Thống kê</a>
 
                     <li class="has-sub">
@@ -83,11 +83,11 @@
                             <i class="fas fa-tags"></i>Sản phẩm</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_SanPham.html"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
+                                <a href="product_manage"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
                             </li>
 
                             <li>
-                                <a href="Add_SP.html"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
+                                <a href="add_product"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
                             </li>
                         </ul>
                     </li>
@@ -97,10 +97,10 @@
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
 
                             <li>
-                                <a href="QL_KM.html"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
+                                <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
                             </li>
                             <li>
-                                <a href="Add_KM.html"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
+                                <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
                             </li>
                         </ul>
                     </li>
@@ -109,10 +109,10 @@
                             <i class="far fa-copy"></i>Đơn hàng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_DonHang.html"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
+                                <a href="order_manage"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
                             </li>
                             <li>
-                                <a href="Add_DH.html"><i class="fas fa-plus-circle"></i>Thêm đơn hàng</a>
+                                <a href="add_order"><i class="fas fa-plus-circle"></i>Thêm đơn hàng</a>
                             </li>
                         </ul>
                     </li>
@@ -121,10 +121,10 @@
                             <i class="fas fa-home"></i>Nhà cung cấp</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_NSX.html"><i class="fas fa-list-ul"></i>Danh mục Nhà cung cấp</a>
+                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục Nhà cung cấp</a>
                             </li>
                             <li>
-                                <a href="Add_Company.html"><i class="fas fa-plus-circle"></i>Thêm Nhà cung cấp</a>
+                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm Nhà cung cấp</a>
                             </li>
                         </ul>
                     </li>
@@ -133,15 +133,15 @@
                             <i class="fas fa-user"></i>Người dùng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_User.html"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
+                                <a href="user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
                             </li>
                             <li>
-                                <a href="Add_User.html"><i class="fas fa-plus-circle"></i>Thêm admin</a>
+                                <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="QL_banner.html">
+                        <a href="banner_manage">
                             <i class="fas fa-calendar-alt"></i>Quản lí ảnh</a>
                     </li>
                 </ul>
@@ -160,7 +160,7 @@
             <nav class="navbar-sidebar">
                 <ul class="list-unstyled navbar__list">
                     <li class="has-sub">
-                        <a class="js-arrow" href="index.html">
+                        <a class="js-arrow" href="thongke_manage">
                             <i class="fas fa-tachometer-alt"></i>Thống kê</a>
 
                     <li class="has-sub">
@@ -168,11 +168,11 @@
                             <i class="fas fa-tags"></i>Sản phẩm</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_SanPham.html"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
+                                <a href="product_manage"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
                             </li>
 
                             <li>
-                                <a href="Add_SP.html"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
+                                <a href="add_product"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
                             </li>
                         </ul>
                     </li>
@@ -182,10 +182,10 @@
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
 
                             <li>
-                                <a href="QL_KM.html"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
+                                <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
                             </li>
                             <li>
-                                <a href="Add_KM.html"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
+                                <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
                             </li>
                         </ul>
                     </li>
@@ -194,10 +194,10 @@
                             <i class="far fa-copy"></i>Đơn hàng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_DonHang.html"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
+                                <a href="order_manage"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
                             </li>
                             <li>
-                                <a href="SuaDH.html"><i class="fas fa-edit"></i>Sửa đơn hàng</a>
+                                <a href="edit_order"><i class="fas fa-edit"></i>Sửa đơn hàng</a>
                             </li>
                         </ul>
                     </li>
@@ -206,10 +206,10 @@
                             <i class="fas fa-home"></i>Nhà cung cấp</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_NSX.html"><i class="fas fa-list-ul"></i>Danh mục Nhà cung cấp</a>
+                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục Nhà cung cấp</a>
                             </li>
                             <li>
-                                <a href="Add_Company.html"><i class="fas fa-plus-circle"></i>Thêm Nhà cung cấp</a>
+                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm Nhà cung cấp</a>
                             </li>
                         </ul>
                     </li>
@@ -218,10 +218,10 @@
                             <i class="fas fa-user"></i>Người dùng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_User.html"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
+                                <a href="user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
                             </li>
                             <li>
-                                <a href="Add_User.html"><i class="fas fa-plus-circle"></i>Thêm admin</a>
+                                <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
                             </li>
                         </ul>
                     </li>
@@ -230,10 +230,10 @@
                             <i class="fas fa-newspaper"></i>Quản lí ảnh</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="QL_banner.html"><i class="fas fa-list-ul"></i><span>Danh mục ảnh</span></a>
+                                <a href="banner_manage"><i class="fas fa-list-ul"></i><span>Danh mục ảnh</span></a>
                             </li>
                             <li>
-                                <a href="Add_banner.html"><i class="fas fa-plus-circle"></i>Thêm ảnh</a>
+                                <a href="add_banner"><i class="fas fa-plus-circle"></i>Thêm ảnh</a>
                             </li>
                         </ul>
                     </li>
@@ -344,7 +344,7 @@
                                 </div>
                                 <div class="table-data__tool-right">
                                     <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                        <a href="Add_Company.html" style="color: white"><i class="zmdi zmdi-plus"></i>thêm</a>
+                                        <a href="add_supplier" style="color: white"><i class="zmdi zmdi-plus"></i>thêm</a>
                                     </button>
                                     <button class="au-btn au-btn-icon au-btn--red au-btn--small ">
                                         <a href="" style="color: white"><i class="zmdi zmdi-delete"></i>Xoá</a>
@@ -393,7 +393,7 @@
 
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Edit">
-                                                   <a href="Edit_Com.html"><i class="zmdi zmdi-edit"></i></a>
+                                                   <a href="edit_supplier"><i class="zmdi zmdi-edit"></i></a>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Delete">
@@ -422,7 +422,7 @@
 
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Edit">
-                                                    <a href="Edit_Com.html"><i class="zmdi zmdi-edit"></i></a>
+                                                    <a href="edit_supplier"><i class="zmdi zmdi-edit"></i></a>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Delete">
@@ -451,7 +451,7 @@
 
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Edit">
-                                                    <a href="Edit_Com.html"><i class="zmdi zmdi-edit"></i></a>
+                                                    <a href="edit_supplier"><i class="zmdi zmdi-edit"></i></a>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Delete">
@@ -480,7 +480,7 @@
 
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Edit">
-                                                    <a href="Edit_Com.html"><i class="zmdi zmdi-edit"></i></a>
+                                                    <a href="edit_supplier"><i class="zmdi zmdi-edit"></i></a>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Delete">
@@ -509,7 +509,7 @@
 
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Edit">
-                                                    <a href="Edit_Com.html"><i class="zmdi zmdi-edit"></i></a>
+                                                    <a href="edit_supplier"><i class="zmdi zmdi-edit"></i></a>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Delete">
@@ -538,7 +538,7 @@
 
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Edit">
-                                                    <a href="Edit_Com.html"><i class="zmdi zmdi-edit"></i></a>
+                                                    <a href="edit_supplier"><i class="zmdi zmdi-edit"></i></a>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Delete">
@@ -567,7 +567,7 @@
 
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Edit">
-                                                    <a href="Edit_Com.html"><i class="zmdi zmdi-edit"></i></a>
+                                                    <a href="edit_supplier"><i class="zmdi zmdi-edit"></i></a>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                         title="Delete">

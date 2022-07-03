@@ -163,7 +163,7 @@
                                 <input class="form-control col-lg-4" type="number" value="1">
                             </div>
                         </div>
-                        <div class="ps-product__shopping"><a class="ps-btn mb-10" href="cart.html">Thêm vào giỏ<i
+                        <div class="ps-product__shopping"><a class="ps-btn mb-10" href="cart">Thêm vào giỏ<i
                                 class="ps-icon-next"></i></a>
 
                         </div>
@@ -359,7 +359,7 @@
                                 <input style="width: 500px" class="form-control" type="text"
                                        placeholder="Nhập tên đi nào...">
                                 <br/>
-                                <div class="ps-product__shopping"><a class="ps-btn mb-10" href="compare.html">SO SÁNH</a>
+                                <div class="ps-product__shopping"><a class="ps-btn mb-10" href="compare">SO SÁNH</a>
 
                                 </div>
 
@@ -373,7 +373,7 @@
                                         <div class="ps-shoe__thumbnail">
                                             <div class="ps-badge ps-badge--sale"><span>-10%</span></div>
                                             <img src="./images/shoe/dell/CXGR01/main.jpg" alt=""><a
-                                                class="ps-shoe__overlay" href="product-detail.html"></a>
+                                                class="ps-shoe__overlay" href="product-detail"></a>
                                         </div>
                                         <br><br>
                                         <div class="ps-shoe__content">
@@ -398,7 +398,7 @@
                                                     <del>18.290.000đ</del>
                                                     <strong class="price">16.460.000đ</strong></p>
                                             </div>
-                                            <a class="compare" href="compare.html">SO SÁNH</a>
+                                            <a class="compare" href="compare">SO SÁNH</a>
                                         </div>
                                     </div>
                                 </div>
@@ -409,7 +409,7 @@
                                             <!-- <div class="ps-badge"><span>Mới</span></div>
                                             <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-3%</span></div> -->
                                             <img src="./images/shoe/dell/GRMGK2/main.jpg" alt=""><a
-                                                class="ps-shoe__overlay" href="product-detail.html"></a>
+                                                class="ps-shoe__overlay" href="product-detail"></a>
                                         </div>
                                         <br><br>
                                         <div class="ps-shoe__content">
@@ -434,7 +434,7 @@
                                                     <del></del>
                                                     <strong class="price">20.990.000đ</strong></p>
                                             </div>
-                                            <a class="compare" href="compare.html">SO SÁNH</a>
+                                            <a class="compare" href="compare">SO SÁNH</a>
                                         </div>
                                     </div>
                                 </div>
@@ -445,7 +445,7 @@
                                             <!-- <div class="ps-badge"><span>Mới</span></div> -->
                                             <div class="ps-badge ps-badge--sale"><span>-7%</span></div>
                                             <img src="./images/shoe/dell/N5I5591W/main.jpg" alt=""><a
-                                                class="ps-shoe__overlay" href="product-detail.html"></a>
+                                                class="ps-shoe__overlay" href="product-detail"></a>
                                         </div>
                                         <br><br>
                                         <div class="ps-shoe__content">
@@ -470,7 +470,7 @@
                                                     <del>25.490.000đ</del>
                                                     <strong class="price">23.490.000đ</strong></p>
                                             </div>
-                                            <a class="compare"href="compare.html">SO SÁNH</a>
+                                            <a class="compare"href="compare">SO SÁNH</a>
                                         </div>
                                     </div>
                                 </div>
@@ -480,7 +480,7 @@
                                             <!-- <div class="ps-badge"><span>Mới</span></div>
                                             <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-3%</span></div> -->
                                             <img src="./images/shoe/dell/GRMGK2/main.jpg" alt=""><a
-                                                class="ps-shoe__overlay" href="product-detail.html"></a>
+                                                class="ps-shoe__overlay" href="product-detail"></a>
                                         </div>
                                         <br><br>
                                         <div class="ps-shoe__content">
@@ -505,7 +505,7 @@
                                                     <del></del>
                                                     <strong class="price">20.990.000đ</strong></p>
                                             </div>
-                                            <a class="compare" href="compare.html">SO SÁNH</a>
+                                            <a class="compare" href="compare">SO SÁNH</a>
                                         </div>
                                     </div>
                                 </div>
@@ -542,7 +542,7 @@
                                 <!-- <div class="ps-badge"><span>Mới</span></div>
                                 <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-3%</span></div> -->
                                 <img src="./images/shoe/dell/70223127/main.jpg" alt=""><a class="ps-shoe__overlay"
-                                                                                          href="product-detail.html"></a>
+                                                                                          href="product-detail"></a>
                             </div>
                             <br><br>
                             <div class="ps-shoe__content">
@@ -575,7 +575,7 @@
                             <div class="ps-shoe__thumbnail">
                                 <div class="ps-badge ps-badge--sale"><span>-10%</span></div>
                                 <img src="./images/shoe/dell/CXGR01/main.jpg" alt=""><a class="ps-shoe__overlay"
-                                                                                        href="product-detail.html"></a>
+                                                                                        href="product-detail"></a>
                             </div>
                             <br><br>
                             <div class="ps-shoe__content">
@@ -609,7 +609,7 @@
                                 <!-- <div class="ps-badge"><span>Mới</span></div>
                                 <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-3%</span></div> -->
                                 <img src="./images/shoe/dell/GRMGK2/main.jpg" alt=""><a class="ps-shoe__overlay"
-                                                                                        href="product-detail.html"></a>
+                                                                                        href="product-detail"></a>
                             </div>
                             <br><br>
                             <div class="ps-shoe__content">
@@ -643,7 +643,7 @@
                                 <!-- <div class="ps-badge"><span>Mới</span></div> -->
                                 <div class="ps-badge ps-badge--sale"><span>-7%</span></div>
                                 <img src="./images/shoe/dell/N5I5591W/main.jpg" alt=""><a class="ps-shoe__overlay"
-                                                                                          href="product-detail.html"></a>
+                                                                                          href="product-detail"></a>
                             </div>
                             <br><br>
                             <div class="ps-shoe__content">

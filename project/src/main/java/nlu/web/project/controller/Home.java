@@ -55,8 +55,8 @@ public class Home {
         return "compare";
     }
 
-    @RequestMapping(value = "contact")
-    public String contact(){
+    @RequestMapping(value = "contact-us")
+    public String contact_us(){
         return "contact-us";
     }
 
@@ -80,6 +80,11 @@ public class Home {
         return "product-detail";
     }
 
+    @RequestMapping(value = "product-listing")
+    public String productListing(){
+        return "product-listing";
+    }
+
     @RequestMapping(value = "thongke_manage")
     public String index_ad(){
         return "thongke_manage";
@@ -90,9 +95,9 @@ public class Home {
         return "add_banner";
     }
 
-    @RequestMapping(value = "add_company")
-    public String addCompany(){
-        return "add_company";
+    @RequestMapping(value = "add_supplier")
+    public String addSupplier(){
+        return "add_supplier";
     }
 
     @RequestMapping(value = "add_promotion")
@@ -150,9 +155,9 @@ public class Home {
         return "edit_banner";
     }
 
-    @RequestMapping(value = "edit_company")
-    public String editCompany(){
-        return "edit_company";
+    @RequestMapping(value = "edit_supplier")
+    public String editSupplier(){
+        return "edit_supplier";
     }
 
     @RequestMapping(value = "edit_promotion")

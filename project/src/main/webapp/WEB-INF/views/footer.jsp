@@ -40,10 +40,10 @@
                         </header>
                         <footer>
                             <ul class="ps-list--link">
-                                <li><a href="index.jsp">TRANG CHỦ</a></li>
-                                <li><a href="about.jsp">GIỚI THIỆU</a></li>
-                                <li><a href="product-listing.jsp">SẢN PHẨM</a></li>
-                                <li><a href="contact-us.jsp">LIÊN HỆ</a></li>
+                                <li><a href="index">TRANG CHỦ</a></li>
+                                <li><a href="about">GIỚI THIỆU</a></li>
+                                <li><a href="product-listing">SẢN PHẨM</a></li>
+                                <li><a href="contact-us">LIÊN HỆ</a></li>
                             </ul>
                         </footer>
                     </aside>

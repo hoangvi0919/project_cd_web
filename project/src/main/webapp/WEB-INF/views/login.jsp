@@ -64,14 +64,14 @@
                                     <input name="remember" type="checkbox" >Ghi nhớ tôi
                                 </label>
                                 <label>
-                                    <a href="forget-pass.jsp">Quên mật khẩu?</a>
+                                    <a href="forget-pass">Quên mật khẩu?</a>
                                 </label>
                             </div>
                             <button class="au-btn au-btn--block au-btn--green m-b-20" >Đăng nhập</button>
                             <div class="register-link">
                                 <p>
                                     Bạn không có tài khoản?
-                                    <a href="./register.jsp">Đăng kí ở đây</a>
+                                    <a href="./register">Đăng kí ở đây</a>
                                 </p>
                             </div>
                         </form>
