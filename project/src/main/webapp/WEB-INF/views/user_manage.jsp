@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- Title Page-->
     <title>QL User</title>
     <!-- Fontfaces CSS-->
@@ -131,29 +132,17 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="has-sub">
-                            <a class="js-arrow" href="thongke_manage">
+                            <a class="js-arrow" href="/thongke_manage">
                                 <i class="fas fa-tachometer-alt"></i>Điều khiển</a>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tags"></i>Sản phẩm</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="product_manage"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
+                                    <a href="/product_manage"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
                                 </li>
                                 <li>
-                                    <a href="add_product"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tags"></i>Sản phẩm khuyến mãi</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
-                                </li>
-                                <li>
-                                    <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
+                                    <a href="/add_product"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
                                 </li>
                             </ul>
                         </li>
@@ -162,49 +151,26 @@
                                 <i class="far fa-copy"></i>Đơn hàng</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="order_manage"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
+                                    <a href="/order_manage"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
                                 </li>
                                 <li>
-                                    <a href="edit_order"><i class="fas fa-edit"></i>Sửa đơn hàng</a>
+                                    <a href="/edit_order"><i class="fas fa-edit"></i>Sửa đơn hàng</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-home"></i>Nhà cung cấp</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục nhà cung cấp</a>
-                                </li>
-                                <li>
-                                    <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm nhà cung cấp</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                                                <li class="has-sub">
+                            <a class="js-arrow" href="/userList">
                                 <i class="fas fa-user"></i>Người dùng</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
+                                    <a href="/user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
                                 </li>
                                 <li>
-                                    <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
+                                    <a href="/add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-newspaper"></i>Quản lí ảnh</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="banner_manage"><i class="fas fa-list-ul"></i><span>Danh mục ảnh</span></a>
-                                </li>
-                                <li>
-                                    <a href="add_banner"><i class="fas fa-plus-circle"></i>Thêm ảnh</a>
-                                </li>
-                            </ul>
-                        </li>
+
                     </ul>
                 </nav>
             </div>
@@ -217,11 +183,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
+                            <form class="form-header" action="" method="">
                             </form>
                             <div class="header-button">
                                 <div class="account-wrap">
@@ -283,289 +245,45 @@
                                 <div class="user-data m-b-30">
                                     <h3 class="title-3 m-b-30">
                                         <i class="zmdi zmdi-account-calendar"></i>Thông tin tài khoản</h3>
-                                    <div class="filters m-b-45">
-                                        <div class="table-data__tool">
-                                            <div class="table-data__tool-left">
-                                                <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
-                                                    <select class="js-select2" name="property">
-                                                        <option selected="selected">Tất cả</option>
-                                                        <option value="">Admin</option>
-                                                        <option value="">Người dùng</option>
-                                                    </select>
-                                                    <div class="dropDownSelect2"></div>
-                                                </div>
-                                                <div class="rs-select2--dark rs-select2--sm rs-select2--border">
-                                                    <select class="js-select2 au-select-dark" name="time">
-                                                        <option selected="selected">Thời gian</option>
-                                                        <option value="">Theo Tháng</option>
-                                                        <option value="">Theo Ngày</option>
-                                                    </select>
-                                                    <div class="dropDownSelect2"></div>
-                                                </div>
-                                            </div>
-                                            <div class="table-data__tool-right">
-                                                <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                                    <a href="add_user" style="color: white"><i class="zmdi zmdi-plus"></i>thêm</a>
-                                                </button>
-                                                <button class="au-btn au-btn-icon au-btn--red au-btn--small ">
-                                                    <a href="" style="color: white"><i class="zmdi zmdi-delete"></i>Xoá</a>
-                                                </button>
-                                                <div class="rs-select2--dark">
-                                                    <button class="au-btn au-btn-icon au-btn--small au-btn-load">cập nhật</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="table-responsive table-data">
                                         <table class="table">
                                             <thead>
                                                 <tr>
                                                     <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
+                                                        ID
                                                     </td>
                                                     <td>Tên tài khoản</td>
                                                     <td>Email</td>
-                                                    <td>Loại</td>
-                                                    <td>Trạng thái</td>
-                                                    <td>Ngày tham gia</td>
+                                                    <td>số điện thoại</td>
+                                                    <td>Địa chỉ</td>
+                                                    <td>Giới tính</td>
                                                     <td></td>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            <c:forEach items="${userList}" var="u">
+
                                                 <tr>
+                                                    <td>${u.id}</td>
+                                                    <td>${u.username}</td>
+                                                    <td>${u.email}</td>
+                                                    <td>${u.phone}</td>
+                                                    <td>${u.address}</td>
+                                                    <td>${u.gender}</td>
+
+                                                   <td><a href="/editUser?id=${u.id}"><button style="background: #1d78cb;border: 5px; color: white; padding: 5px">Edit</button></a></td>
                                                     <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>Nguyễn Văn A</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <span>
-                                                                <a href="#">nguyena12@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role admin">Root</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option selected="selected">Mở</option>
-                                                                <option disabled="disabled" value="">Khóa</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="date">10/10/2010</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data-feature">
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                <a href="edit_user"> <i class="zmdi zmdi-edit"></i></a>
-                                                            </button>
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </button>
-                                                        </div>
+                                                        <form action="/deleteUser?id=${u.id}" method="post">
+                                                            <input type="submit" value="Delete"  style="background: red ;border: 5px; color: white; padding: 5px;cursor: pointer;"/>
+                                                        </form>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>Nguyễn Văn Sa</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <span>
-                                                                <a href="#">nguyensa512@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role member">Admin</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option selected="selected">Mở</option>
-                                                                <option value="">Khóa</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="date">10/12/2010</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data-feature">
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                <a href="edit_user"> <i class="zmdi zmdi-edit"></i></a>
-                                                            </button>
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>Nguyễn Thiện Thuật</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <span>
-                                                                <a href="#">nguyenya92@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role user">User</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option selected="selected">Mở</option>
-                                                                <option value="">Khóa</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="date">18/10/2015</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data-feature">
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                <a href="edit_user"> <i class="zmdi zmdi-edit"></i></a>
-                                                            </button>
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>Nguyễn Trần Sang Trọng</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <span>
-                                                                <a href="#">sang612@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role user">User</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option selected="selected">Mở</option>
-                                                                <option value="">Khóa</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="date">19/10/2019</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data-feature">
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                <a href="edit_user"> <i class="zmdi zmdi-edit"></i></a>
-                                                            </button>
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <label class="au-checkbox">
-                                                            <input type="checkbox">
-                                                            <span class="au-checkmark"></span>
-                                                        </label>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <h6>Nguyễn Văn Nam</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data__info">
-                                                            <span>
-                                                                <a href="#">nguyennam912@gmail.com</a>
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="role user">User</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="rs-select2--trans rs-select2--sm">
-                                                            <select class="js-select2" name="property">
-                                                                <option selected="selected">Mở</option>
-                                                                <option value="">Khóa</option>
-                                                            </select>
-                                                            <div class="dropDownSelect2"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <span class="date">10/10/2018</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data-feature">
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                <a href="edit_user"> <i class="zmdi zmdi-edit"></i></a>
-                                                            </button>
-                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                                <i class="zmdi zmdi-delete"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                            </c:forEach>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="user-data__footer">
-                                        <button class="au-btn au-btn-load">cập nhật</button>
-                                    </div>
+
                                 </div>
                                 <!-- END USER DATA-->
                             </div>

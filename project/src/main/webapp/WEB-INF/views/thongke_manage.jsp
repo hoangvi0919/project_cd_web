@@ -73,44 +73,7 @@
                         </ul>
                     </li>
                     <li class="has-sub">
-                        <a class="js-arrow" href="promotion_manage">
-                            <i class="fas fa-tags"></i>Sản phẩm khuyến mãi</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-
-                            <li>
-                                <a><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
-                            </li>
-                            <li>
-                                <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="far fa-copy"></i>Đơn hàng</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="order_manage"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
-                            </li>
-                            <li>
-                                <a href="add_order"><i class="fas fa-plus-circle"></i>Thêm đơn hàng</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-home"></i>Nhà cung cấp</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục nhà cung cấp</a>
-                            </li>
-                            <li>
-                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm nhà cung cấp</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="/userList">
                             <i class="fas fa-user"></i>Người dùng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
@@ -120,10 +83,6 @@
                                 <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="banner_manage">
-                            <i class="fas fa-calendar-alt"></i>Quản lí ảnh</a>
                     </li>
                 </ul>
             </div>
