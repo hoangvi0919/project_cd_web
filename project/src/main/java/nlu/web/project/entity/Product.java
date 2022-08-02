@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Data
@@ -104,6 +106,21 @@ public class Product {
     private String loaiPin;
     @NotBlank
     private String thongTinPin;
+
+    // Ảnh
+    private String mainImg;
+    @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
+    private List<ProductImg> images;
+
+    // Giá
+    private int gia;
+
+    private double giamGia;
+
+    private int giaBan;
+
+
+
 
 
 
