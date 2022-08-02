@@ -1,20 +1,20 @@
 package nlu.web.project.entity;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Table(name = "product")
 public class Product {
     @Id
@@ -53,15 +53,16 @@ public class Product {
 
     // Bo nho
     @NotNull
-    private int RAM;
+    private int ram;
 
     private String loaiRam;
 
     private int busRam;
 
-    private int RamToiDa;
+    private int ramToiDa;
     @NotBlank
-    private String oCung;
+    @Column(name = "o_cung")
+    private String ocung;
 
     // Kich Thuoc
     @NotNull
@@ -96,7 +97,7 @@ public class Product {
 
     // He dieu hanh
     @NotBlank
-    private String  tenHdh;
+    private String tenHdh;
     @NotBlank
     private String loaiHdh;
 
@@ -108,7 +109,10 @@ public class Product {
 
     // Ảnh
     private String mainImg;
-    @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     private List<ProductImg> images;
 
     // Giá
@@ -117,13 +121,6 @@ public class Product {
     private double giamGia;
 
     private int giaBan;
-
-
-
-
-
-
-
 
 
 }

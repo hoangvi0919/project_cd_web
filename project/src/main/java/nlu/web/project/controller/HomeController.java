@@ -32,8 +32,8 @@ public class HomeController {
     @RequestMapping(value = "index")
     public ModelAndView home() {
         ModelAndView mav = new ModelAndView("index");
-        List<Product> noiBat = productService.findByTrangThaiContainingIgnoreCase("NoiBat");
-        mav.addObject("listNotBat", noiBat);
+        List<Product> noiBat = productService.findAllByTrangThaiContainingIgnoreCase("NoiBat");
+        mav.addObject("listNoiBat", noiBat);
         List<Product> banChay = productService.getList10BanChay();
         mav.addObject("listBanChay", banChay);
         return mav;
