@@ -1,7 +1,11 @@
 package nlu.web.project.repository;
 
-import nlu.web.project.entity.UserEntity;
+import nlu.web.project.entity.User;
+import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<UserEntity,String > {
+import java.util.List;
+
+public interface UserRepository extends JpaRepository<User,String > {
+    List<User> findByUsername(String username);
 }

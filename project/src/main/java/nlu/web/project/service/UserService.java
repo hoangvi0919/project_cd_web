@@ -1,9 +1,11 @@
 package nlu.web.project.service;
 
-import nlu.web.project.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import nlu.web.project.entity.User;
 
-public class UserService {
-    @Autowired
-    private UserRepository userRepository;
+public interface UserService {
+    public User findUserByUsername(String username);
+
+    public User saveUser(User user);
+
 }
+//

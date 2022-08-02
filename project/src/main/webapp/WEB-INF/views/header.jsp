@@ -1,4 +1,11 @@
+<%@ page import="nlu.web.project.entity.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="d" uri="http://www.springframework.org/tags/form" %>
+
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+<!
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,20 +57,21 @@
                 </div>
                 <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
                     <div class="header__actions">
+                        <a href="log-in" >
+                            ĐĂNG NHẬP
+                        </a>
+                    </div>
+                    <div class="header__actions">
                         <a href="register">ĐĂNG KÝ
                         </a>
                     </div>
                     <div class="header__actions">
-                        <a href="index">
-                            Đăng Xuất
-                        </a>
-                    </div>
-                    <div class="header__actions">
-                        <a href="login" >
-                            ĐĂNG NHẬP
-                        </a>
-                    </div>
 
+                        <a href="/User/logout">
+                            ĐĂNG XUẤT
+                        </a>
+
+                    </div>
                 </div>
             </div>
         </div>

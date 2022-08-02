@@ -35,7 +35,7 @@ public class Home {
         return "login_admin";
     }
 
-    @RequestMapping(value = "sign-up")
+    @RequestMapping(value = "register")
     public String register(){
         return "register";
     }

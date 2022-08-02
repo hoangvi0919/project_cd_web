@@ -72,13 +72,13 @@
                 <img src="images/logo1.png" alt="laptopnlu">
 
             </div>
-            <form action="DoRegister" method="post" class="registerform" onsubmit="return validForm()"  >
+            <form action="/save-user" method="post" class="registerform"  >
                 <div class="input">
-                    <input type="text" id="user" name="nameLogin">
+                    <input type="text" id="user" name="username" value="${user.username}">
                     <div class="placeholder" id="place-user" >Tên đăng nhập</div>
                 </div>
                 <div class="input">
-                    <input type="password" id="pass" name="password">
+                    <input type="password" id="pass" name="password" value="${user.password}">
                     <div class="placeholder" id="place-pass" >Mật khẩu</div>
                     <div class="pass fas fa-eye" id="eye"></div>
                 </div>
@@ -87,33 +87,31 @@
                     <div class="placeholder" id="place-repass" >Nhập lại mật khẩu</div>
                 </div>
                 <div class="input">
-                    <input type="text" id="name" name="yourName">
-                    <div class="placeholder" id="place-name" >Tên của bạn</div>
+                    <input type="text" id="name" name="name" value="${user.name}">
+                    <div class="placeholder" id="place-name">Tên của bạn</div>
                 </div>
                 <div class="input">
-                    <input type="number" id="phone" name="phone">
-                    <div class="placeholder" id="place-phone" >Số điện thoại</div>
+                    <input type="number" id="phone" name="phone" value="${user.phone}">
+                    <div class="placeholder" id="place-phone" >Số điện  thoại</div>
                 </div>
                 <div class="input">
-                    <input type="text" id="email" name="email">
+                    <input type="text" id="email" name="email" value="${user.email}">
                     <div class="placeholder" id="place-email" >Email</div>
                 </div>
                 <div class="input">
-                    <textarea id="txtaddress" oninput="auto_grow(this)" name="address"></textarea>
+                    <textarea id="txtaddress" oninput="auto_grow(this)" name="address" value="${user.address}"></textarea>
                     <div class="placeholder" id="place-txtaddress" >Địa chỉ</div>
                 </div>
-                <div class="input-group">
-                    <input id="gender-male" type="radio" name="gender" value="male"/>
-                    <label for="gender-male">Nam</label>
-                    <input id="gender-female" type="radio" name="gender" value="female"/>
-                    <label for="gender-female">Nữ</label>
+                <div class="input">
+                    <input type="text" id="sex" name="gender" value="${user.gender}">
+                    <div class="placeholder" id="place-gender" >Giới tính</div>
                 </div>
                 <div class="input">
-                    <input type="date" id="datepicker" name="dateOfBirth">
+                    <input type="text" id="datepicker" name="dateOfBirth" value="${user.dob}">
                     <div class="placeholder" id="place-datepicker">Ngày sinh</div>
                 </div>
                 <button id="btndk">Đăng ký</button>
-                <p class="text-center">Bạn đã có tài khoản? <a href="./login" id="linkdn">Đăng nhập</a></p>
+                <p class="text-center">Bạn đã có tài khoản? <a href="/login" id="linkdn">Đăng nhập</a></p>
             </form>
         </div>
     </div>

@@ -48,14 +48,16 @@
                         </a>
                     </div>
                     <div class="login-form">
-                        <form action="DoLogin" method="post">
+                        <form action="/validate-user" method="post">
                             <div class="form-group">
                                 <label>Tên tài khoản:</label>
-                                <input name="username" class="au-input au-input--full" type="text"  placeholder="Nhập tên tài khoản">
+                                <input name="username" class="au-input au-input--full" type="text"
+                                       placeholder="Nhập tên tài khoản" value="${user.username}">
                             </div>
                             <div class="form-group">
                                 <label>Mật khẩu:</label>
-                                <input name="password"  class="au-input au-input--full" id="pass" type="password" placeholder="Nhập mật khẩu">
+                                <input name="password"  class="au-input au-input--full"
+                                       id="pass" type="password" placeholder="Nhập mật khẩu" value="${user.password}">
                                 <div class="pass fas fa-eye" id="eye"></div>
                                 <div></div>
                             </div>
@@ -67,11 +69,11 @@
                                     <a href="forget-pass">Quên mật khẩu?</a>
                                 </label>
                             </div>
-                            <button class="au-btn au-btn--block au-btn--green m-b-20" >Đăng nhập</button>
+                            <button class="au-btn au-btn--block au-btn--green m-b-20" onclick="ValidateEmail(document.login.email,document.login.password)">Đăng nhập</button>
                             <div class="register-link">
                                 <p>
                                     Bạn không có tài khoản?
-                                    <a href="./register">Đăng kí ở đây</a>
+                                    <a href="register">Đăng kí ở đây</a>
                                 </p>
                             </div>
                         </form>
@@ -81,6 +83,41 @@
         </div>
     </div>
 </div>
+
+<script >
+    function ValidateEmail(inputText,pass)
+    {
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(inputText.value.match(mailformat))
+        {
+            document.form1.text1.focus();
+            if(pass.length()>7)
+
+                return true;
+            else{
+                alert("You have entered an invalid email address!");
+                document.form1.text1.focus();
+                return false;
+            }
+
+        }
+        if( pass.length()<7)
+        {
+            alert("length of password should be greater than 7!");
+            document.form1.text1.focus();
+            return false;
+        }
+
+
+        else
+        {
+            alert("You have entered an invalid email address!");
+            document.form1.text1.focus();
+            return false;
+        }
+    }
+
+</script>
 <!-- Footer -->
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
