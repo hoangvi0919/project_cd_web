@@ -29,7 +29,7 @@ public class HomeController {
         return "about";
     }
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = {"/", "index"})
     public ModelAndView home() {
         ModelAndView mav = new ModelAndView("index");
         List<Product> noiBat = productService.findAllByTrangThaiContainingIgnoreCase("NoiBat");
