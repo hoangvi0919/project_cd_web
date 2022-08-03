@@ -1,10 +1,10 @@
 package nlu.web.project.entity;
 
-import org.springframework.format.annotation.NumberFormat;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
@@ -15,12 +15,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
-    @Size(min = 2, max = 20, message = "Username có từ 2-20 ký tự!")
-    @Column(name = "username")
+
+    @Column(name = "username", unique = true)
+    @NotBlank
     private String username;
 
-    @Size(min = 6, max = 20, message = "Pass có từ 6-20 ký tự!")
     @Column(name = "password")
+    @Size(min = 6)
     private String password;
 
     @Column(name = "address")
@@ -29,16 +30,15 @@ public class User {
     @Column(name = "state")
     private String state;
 
-    @NotBlank(message = "Không được bỏ trống tên!!!")
     @Column(name = "name")
+    @NotBlank
     private String name;
 
-    @Size(min = 9, max = 12, message = "sđt có từ 9-12 số!")
     @Column(name = "phone")
     private String phone;
 
-    @Email(message = "Nhập đúng định dạng email")
     @Column(name = "email")
+    @Pattern(regexp = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\\]?)$")
     private String email;
 
     @Column(name = "type")
@@ -48,6 +48,7 @@ public class User {
     private String gender;
 
     @Column(name = "dob")
+    @Pattern(regexp = "^(?=\\d)(?:(?:31(?!.(?:0?[2469]|11))|(?:30|29)(?!.0?2)|29(?=.0?2.(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(?:\\x20|$))|(?:2[0-8]|1\\d|0?[1-9]))([/])(?:1[012]|0?[1-9])\\1(?:1[6-9]|[2-9]\\d)?\\d\\d(?:(?=\\x20\\d)\\x20|$))?(((0?[1-9]|1[012])(:[0-5]\\d){0,2}(\\x20[AP]M))|([01]\\d|2[0-3])(:[0-5]\\d){1,2})?$")
     private String dob;
 
     @Column(name = "avatar")

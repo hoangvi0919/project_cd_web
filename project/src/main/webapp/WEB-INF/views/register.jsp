@@ -103,15 +103,12 @@
                     <div class="placeholder" id="place-txtaddress" >Địa chỉ</div>
                 </div>
                 <div class="input">
-                    <input type="text" id="sex" name="gender" value="${user.gender}">
-                    <div class="placeholder" id="place-gender" >Giới tính</div>
-                </div>
-                <div class="input">
-                    <input type="text" id="datepicker" name="dateOfBirth" value="${user.dob}">
+                    <input type="text" id="datepicker" name="dob" value="${user.dob}">
                     <div class="placeholder" id="place-datepicker">Ngày sinh</div>
                 </div>
-                <button id="btndk">Đăng ký</button>
-                <p class="text-center">Bạn đã có tài khoản? <a href="/login" id="linkdn">Đăng nhập</a></p>
+                <button id="btndk" type="submit">Đăng ký</button>
+
+                <p class="text-center">Bạn đã có tài khoản? <a href="/log-in" id="linkdn">Đăng nhập</a></p>
             </form>
         </div>
     </div>

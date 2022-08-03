@@ -2,13 +2,15 @@ package nlu.web.project.controller;
 
 import nlu.web.project.entity.User;
 import nlu.web.project.repository.UserRepository;
+import nlu.web.project.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.validation.Valid;
 
 @Controller
 @SessionAttributes("User")
@@ -19,22 +21,24 @@ public class RegisterController {
     }
 
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
 
     @PostMapping(path = "/save-user")
-    public ModelAndView registerUser(User user, Model model) {
+    public String registerUser(@Valid User user, Errors errors) {
+        if(errors.hasErrors() || userService.existsByUsername(user.getUsername())){
+            System.out.println(errors.toString());
+            return "redirect:/register";
+        }
 
-        String ret = "register";
-        String email = user.getEmail();
-        String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-        if (email.matches(regex)) {
-            userRepository.save(user);
-            ret = "index";
-        } else
-            ret = "register";
-
-        ModelAndView mode = new ModelAndView(ret);
-        mode.addObject("l", user);
-        return mode;
+        userService.save(user);
+        return "redirect:/log-in";
     }
+
+    @ResponseBody
+    @GetMapping("/exist/{username}")
+    public boolean existsByUsername(@PathVariable String username){
+        return userService.existsByUsername(username);
+    }
+
+
 }
