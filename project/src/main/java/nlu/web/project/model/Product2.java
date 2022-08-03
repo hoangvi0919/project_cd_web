@@ -105,7 +105,7 @@ public class Product2 {
 
     @Override
     public String toString() {
-        return "Product2{" +
+        return "ProductChild{" +
                 "id='" + id + '\'' +
                 ", trangThai='" + trangThai + '\'' +
                 ", ten='" + ten + '\'' +

@@ -32,6 +32,7 @@ public class RegisterController {
             ret = "index";
         } else
             ret = "register";
+
         ModelAndView mode = new ModelAndView(ret);
         mode.addObject("l", user);
         return mode;

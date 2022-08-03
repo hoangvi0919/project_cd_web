@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="stag" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,19 +97,6 @@
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-tags"></i>Sản phẩm khuyến mãi</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-
-                            <li>
-                                <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
-                            </li>
-                            <li>
-                                <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
                             <i class="far fa-copy"></i>Đơn hàng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
@@ -114,18 +104,6 @@
                             </li>
                             <li>
                                 <a href="add_order"><i class="fas fa-plus-circle"></i>Thêm đơn hàng</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-home"></i>Nhà cung cấp</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục nhà cung cấp</a>
-                            </li>
-                            <li>
-                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm nhà cung cấp</a>
                             </li>
                         </ul>
                     </li>
@@ -140,10 +118,6 @@
                                 <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="banner_manage">
-                            <i class="fas fa-calendar-alt"></i>Quản lí ảnh</a>
                     </li>
                 </ul>
             </div>
@@ -179,19 +153,6 @@
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-tags"></i>Sản phẩm khuyến mãi</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-
-                            <li>
-                                <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
-                            </li>
-                            <li>
-                                <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
                             <i class="far fa-copy"></i>Đơn hàng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
@@ -204,18 +165,6 @@
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fas fa-home"></i>Nhà cung cấp</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục nhà cung cấp</a>
-                            </li>
-                            <li>
-                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm nhà cung cấp</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
                             <i class="fas fa-user"></i>Người dùng</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
@@ -223,18 +172,6 @@
                             </li>
                             <li>
                                 <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-newspaper"></i>Quản lí ảnh</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="banner_manage"><i class="fas fa-list-ul"></i><span>Danh mục ảnh</span></a>
-                            </li>
-                            <li>
-                                <a href="add_banner"><i class="fas fa-plus-circle"></i>Thêm ảnh</a>
                             </li>
                         </ul>
                     </li>
@@ -322,396 +259,54 @@
                             <!-- DATA TABLE -->
                             <h3 class="title-5 m-b-35">Thông tin sản phẩm</h3>
                             <div class="table-data__tool">
-                                <div class="table-data__tool-left">
-                                    <div class="rs-select2--light rs-select2--md">
-                                        <select class="js-select2" name="property">
-                                            <option selected="selected">Tất cả</option>
-                                            <option value="">ASUS</option>
-                                            <option value="">DELL</option>
-                                            <option value="">HP</option>
-                                            <option value="">ACER</option>
-                                        </select>
-                                        <div class="dropDownSelect2"></div>
-                                    </div>
-                                    <div class="rs-select2--light rs-select2--md">
-                                        <select class="js-select2" name="time">
-                                            <option selected="selected">Giá</option>
-                                            <option value="">1 500 000 -></option>
-                                            <option value="">7 000 000 -></option>
-                                            <option value="">15 000 000 -></option>
-                                            <option value="">25 000 000 -></option>
-                                        </select>
-                                        <div class="dropDownSelect2"></div>
-                                    </div>
-                                    <button class="au-btn-filter">
-                                        <i class="zmdi zmdi-filter-list"></i>Lọc
-                                    </button>
-                                </div>
                                 <div class="table-data__tool-right">
+                                    <form action="/add">
                                     <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                        <a href="add_product" style="color: white"><i class="zmdi zmdi-plus"></i>thêm</a>
+                                        <a href="/add" style="color: white"><i class="zmdi zmdi-plus"></i>thêm</a>
                                     </button>
-                                    <button class="au-btn au-btn-icon au-btn--red au-btn--small ">
-                                        <a href="" style="color: white"><i class="zmdi zmdi-delete"></i>Xoá</a>
-                                    </button>
-                                    <div class="rs-select2--dark ">
-                                        <button class="au-btn au-btn-load">Cập Nhật</button>
-                                        <div class="dropDownSelect2"></div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="table-responsive table-responsive-data2 " style="overflow: auto; height: 550px">
                                 <table class="table table-data2 ">
                                     <thead>
                                     <tr>
-                                        <th style="width: 35px">
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </th>
+                                        <th>STT</th>
                                         <th>Mã SP</th>
                                         <th>Tên SP</th>
                                         <th>Nhãn hàng</th>
                                         <th>Mô tả</th>
-                                        <th>Ngày tạo</th>
-                                        <th>Thời gian BH</th>
                                         <th>Trạng thái</th>
                                         <th>Giá</th>
                                         <th></th>
-                                    </tr>
+                                        <th></th>
+
+
                                     </thead>
                                     <tbody>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>ASUS01</td>
-                                        <td class="desc">Laptop ASUS A504 i5</td>
-                                        <td>ASUS</td>
-                                        <td>CPU core i5, RAM8GB, SSD 512GB</td>
-                                        <td>27-09-2018 </td>
-                                        <td>18 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>14.999.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
+                                    <c:forEach items="${productList}" var="p">
+                                    <tr>
+                                        <th>${p.id}</th>
+                                        <th>${p.idName}</th>
+                                        <th>${p.name}</th>
+                                        <th>${p.hangSx}</th>
+                                        <th>${p.moTa}</th>
+                                        <th>${p.trangThai}</th>
+                                        <th>${p.gia}</th>
 
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                   <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-                                                </button>
-                                            </div>
+                                        <td>
+                                            <a href="/editProduct?id=${p.id}"><button style="background: #1d78cb;border: 5px; color: white; padding: 5px">Edit</button></a></td>
+                                        <td>
+                                            <form action="/deleteProduct?id=${p.id}" method="post">
+                                                <input type="submit" value="Delete"  style="background: red ;border: 5px; color: white; padding: 5px;cursor: pointer;"/>
+                                            </form>
                                         </td>
                                     </tr>
-                                    <tr class="spacer"></tr>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>ASUS02</td>
-                                        <td class="desc">Laptop ASUS A603 i5</td>
-                                        <td>ASUS</td>
-                                        <td>CPU core i5, RAM16GB, SSD 512GB</td>
-                                        <td>15-08-2020 </td>
-                                        <td>24 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>24.500.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
 
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                    <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="spacer"></tr>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>DELL01</td>
-                                        <td class="desc">Laptop DELL A623 i5</td>
-                                        <td>ASUS</td>
-                                        <td>CPU core i5, RAM20GB, HDD 1TB</td>
-                                        <td>12-08-2017</td>
-                                        <td>12 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>8.950.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
-
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                    <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="spacer"></tr>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>HP0001</td>
-                                        <td class="desc">Laptop HP S12A4 i3</td>
-                                        <td>HP</td>
-                                        <td>CPU core i3, RAM4GB, HDD 1TB</td>
-                                        <td>18-09-2019</td>
-                                        <td>12 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>8.300.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
-
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                    <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="spacer"></tr>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>ASUS05</td>
-                                        <td class="desc">Laptop ASUS A456 C12 i5</td>
-                                        <td>ASUS</td>
-                                        <td>CPU core i5, RAM16GB, SSD 512GB</td>
-                                        <td>05-02-2018</td>
-                                        <td>12 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>17.000.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
-
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                    <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="spacer"></tr>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>DELL003</td>
-                                        <td class="desc">Laptop DELL A7891 i5</td>
-                                        <td>ASUS</td>
-                                        <td>CPU core i5, RAM8GB, SSD 512GB</td>
-                                        <td>16-06-2019</td>
-                                        <td>12 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>10.999.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
-
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                    <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="spacer"></tr>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>DELL009</td>
-                                        <td class="desc">Laptop DELL A785 i5</td>
-                                        <td>ASUS</td>
-                                        <td>CPU core i5, RAM8GB, HDD 1TB</td>
-                                        <td>10-10-2020</td>
-                                        <td>12 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>6.700.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
-
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                    <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="spacer"></tr>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>ACER022</td>
-                                        <td class="desc">Laptop ACER A704 i5</td>
-                                        <td>ACER</td>
-                                        <td>CPU core i5, RAM8GB, SSD 512GB</td>
-                                        <td>18-02-2017</td>
-                                        <td>24 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>5.600.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
-
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                    <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="spacer"></tr>
-                                    <tr class="tr-shadow">
-                                        <td>
-                                            <label class="au-checkbox">
-                                                <input type="checkbox">
-                                                <span class="au-checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>ASUS0111</td>
-                                        <td class="desc">Laptop ASUS A756 i5</td>
-                                        <td>ASUS</td>
-                                        <td>CPU core i5, RAM8GB, SSD 512GB</td>
-                                        <td>13-02-2020</td>
-                                        <td>12 tháng</td>
-                                        <td>
-                                            <span class="status--process">Còn hàng</span>
-                                        </td>
-                                        <td>11.999.000</td>
-                                        <td>
-                                            <div class="table-data-feature">
-
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Edit">
-                                                    <a href="edit_product"><i class="zmdi zmdi-edit"></i></a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                        title="More">
-                                                    <a href="product_view"><i class="zmdi zmdi-more"></i></a>
-
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="spacer"></tr>
+                                    </c:forEach>
                                     </tbody>
+
                                 </table>
-                                <div class="user-data__footer">
-                                    <button class="au-btn au-btn-load">cập nhật</button>
-                                </div>
                             </div>
                             <!-- END DATA TABLE -->
                         </div>

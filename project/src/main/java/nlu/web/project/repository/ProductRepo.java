@@ -12,4 +12,8 @@ public interface ProductRepo extends JpaRepository<Product, Long> {
     @Query(value = "SELECT * FROM product WHERE trang_thai NOT LIKE '%NKD%' " +
             "ORDER BY sl_da_ban DESC Limit 0, 10", nativeQuery = true)
             List<Product>getList10BanChay();
+
+
+
+
 }

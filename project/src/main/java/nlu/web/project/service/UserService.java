@@ -9,6 +9,8 @@ public interface UserService {
 
     public User saveUser(User user);
 
+    public void createOrUpdateEmployee(User user);
+
     public List<User> getAllUsers();
 
     public User editUser(Long id);

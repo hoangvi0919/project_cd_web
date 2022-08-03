@@ -1,6 +1,11 @@
 package nlu.web.project.entity;
 
+import org.springframework.format.annotation.NumberFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
@@ -10,10 +15,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
-
+    @Size(min = 2, max = 20, message = "Username có từ 2-20 ký tự!")
     @Column(name = "username")
     private String username;
 
+    @Size(min = 6, max = 20, message = "Pass có từ 6-20 ký tự!")
     @Column(name = "password")
     private String password;
 
@@ -23,12 +29,15 @@ public class User {
     @Column(name = "state")
     private String state;
 
+    @NotBlank(message = "Không được bỏ trống tên!!!")
     @Column(name = "name")
     private String name;
 
+    @Size(min = 9, max = 12, message = "sđt có từ 9-12 số!")
     @Column(name = "phone")
     private String phone;
 
+    @Email(message = "Nhập đúng định dạng email")
     @Column(name = "email")
     private String email;
 
