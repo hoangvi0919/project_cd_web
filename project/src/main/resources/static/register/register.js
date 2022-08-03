@@ -5,6 +5,25 @@ $(document).ready(function() {
             $(this).val("\n" + $(this).val());
     });
 
+    $("#user").keyup(function (){
+            $.ajax({
+               url: "/exist/" + $(this).val(),
+                cache: false,
+                dataType: "text",
+                success: function (msg) {
+                    if(msg === "false"){
+                        $("#user").css("background-color", "aliceblue");
+                    }
+                    else{
+                        $("#user").css("background-color", "mistyrose");
+                    }
+                }
+
+            });
+    });
+
+
+
     $("#eye").click(function() {
         var value = $(this).attr("class");
         if (value == "pass fas fa-eye") {
@@ -81,8 +100,8 @@ function validate(input) {
     var value = $(input).val();
     const dateRegex = /^(?=\d)(?:(?:31(?!.(?:0?[2469]|11))|(?:30|29)(?!.0?2)|29(?=.0?2.(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(?:\x20|$))|(?:2[0-8]|1\d|0?[1-9]))([/])(?:1[012]|0?[1-9])\1(?:1[6-9]|[2-9]\d)?\d\d(?:(?=\x20\d)\x20|$))?(((0?[1-9]|1[012])(:[0-5]\d){0,2}(\x20[AP]M))|([01]\d|2[0-3])(:[0-5]\d){1,2})?$/;
     switch (id) {
-        case "user":
-            return (value.length > 0) ? true : false;
+        // case "user":
+        //     return (value.length > 0) ? true : false;
         case "pass":
             return (value.length >= 6 && $("#repass").val() == value) ? true : false;
         case "repass":
