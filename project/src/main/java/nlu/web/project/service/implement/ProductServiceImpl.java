@@ -16,8 +16,8 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Override
-    public List<Product> findByTrangThaiContainingIgnoreCase(String str) {
-        return productRepo.findByTrangThaiContainingIgnoreCase(str);
+    public List<Product> findAllByTrangThaiContainingIgnoreCase(String str) {
+        return productRepo.findAllByTrangThaiContainingIgnoreCase(str);
     }
 
     @Override
