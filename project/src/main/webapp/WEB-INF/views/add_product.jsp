@@ -299,7 +299,8 @@
                                     <strong style="font-size: 25PX">THÊM SẢN PHẨM</strong>
                                 </div>
                                 <div class="card-body card-block">
-                                    <form:form  id="Myform" method="POST" modelAttribute="productChild" action="/save-product"
+                                    <form:form  id="Myform" method="POST" modelAttribute="productChild" action="/save-product">
+                                                <p id="al_error"></p>
                                                class="form-horizontal" name="user">
                                         <div class="row form-group">
                                             <div class="col col-md-3">
@@ -389,12 +390,12 @@
 
 <script>
     // Lấy giá trị của một input
-    function getValue(id){
+    function getValue(id) {
         return document.getElementById(id).value.trim();
     }
 
     // Hiển thị lỗi
-    function showError(key, mess){
+    function showError(key, mess) {
         document.getElementById(key + '_error').innerHTML = mess;
     }
 
@@ -403,25 +404,33 @@
 
         // 1 maSP
         var idName = getValue('idName');
-        if (idName == '' || idName.length < 3 || !/^[a-zA-Z0-9]+$/.test(idName)){
-            flag = false;
-            showError('idName', 'Vui lòng kiểm tra lại mã sản phẩm');
-        }
-
         var name = getValue('name');
-        if (name == '' || teSP.length < 20 || !/^[a-zA-Z0-9]+$/.test(name)){
-            flag = false;
-            showError('idName', 'Vui lòng kiểm tra lại tên  sản phẩm');
-        }
-
-
-        // 3. hãng
         var hang = getValue('hangSx');
-        if (hang != '' &&  /^[0-9]{10}$/.test(hang)){
-            flag = false;
-            showError('phone', 'Vui lòng kiểm tra lại hãng sản xuất');
-        }
+        var gia = getValue('gia');
 
+        if (idName == '' && name == '' && hang == '' && gia == '') {
+            flag = false;
+            showError('al', "Bạn đã chưa nhập gì cả! Vui lòng nhập đầy đủ thông tin!")
+        } else {
+
+            if (idName == '' || idName.length < 3 || !/^[a-zA-Z0-9]+$/.test(idName)) {
+                flag = false;
+                showError('idName', 'Vui lòng kiểm tra lại mã sản phẩm');
+            }
+
+            if (name == '' || teSP.length < 20 || !/^[a-zA-Z0-9]+$/.test(name)) {
+                flag = false;
+                showError('idName', 'Vui lòng kiểm tra lại tên  sản phẩm');
+            }
+
+
+            // 3. hãng
+
+            if (hang != '' && /^[0-9]{10}$/.test(hang)) {
+                flag = false;
+                showError('phone', 'Vui lòng kiểm tra lại hãng sản xuất');
+            }
+        }
         // // 4. Email
         // var email = getValue('email');
         // var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -430,13 +439,13 @@
         //
         //     showError('phone', 'Vui lòng kiểm tra lại Email');
         // }
-        var gia = getValue('gia');
-        if (hang != '' &&  !/^[0-9]{10}$/.test(gia)){
+
+        if (hang != '' && !/^[0-9]{10}$/.test(gia)) {
             flag = false;
             showError('phone', 'Vui lòng kiểm tra lại giá ');
         }
         return flag;
-        
+
     }
 </script>
 <!-- Jquery JS-->
