@@ -52,6 +52,11 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
+    public String existsByUsernameStr(String username) {
+        return userRepository.existsByUsername(username)+"";
+    }
+
+    @Override
     public boolean existsByUsername(String username) {
         return userRepository.existsByUsername(username);
     }

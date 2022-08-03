@@ -36,8 +36,8 @@ public class RegisterController {
 
     @ResponseBody
     @GetMapping("/exist/{username}")
-    public boolean existsByUsername(@PathVariable String username){
-        return userService.existsByUsername(username);
+    public String existsByUsername(@PathVariable String username){
+        return userService.existsByUsernameStr(username);
     }
 
 

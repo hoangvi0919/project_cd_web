@@ -17,8 +17,8 @@ public interface UserService {
 
     public void deleteUser(Long id);
 
+    String existsByUsernameStr(String username);
     boolean existsByUsername(String username);
-
     void save(User user);
 }
 //
