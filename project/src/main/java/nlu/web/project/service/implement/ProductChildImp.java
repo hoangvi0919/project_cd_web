@@ -1,6 +1,7 @@
 package nlu.web.project.service.implement;
 
 import nlu.web.project.entity.ProductChild;
+import nlu.web.project.entity.User;
 import nlu.web.project.repository.ProductChildRepo;
 import nlu.web.project.service.ProductChildService;
 import nlu.web.project.service.ProductService;
@@ -26,5 +27,10 @@ public class ProductChildImp implements ProductChildService {
     @Override
     public void saveProduct(ProductChild productChild) {
           productChildRepo.save(productChild);
+    }
+
+    @Override
+    public ProductChild editProuctChild(long id) {
+        return productChildRepo.getOne(id);
     }
 }

@@ -29,7 +29,7 @@
     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
@@ -234,11 +234,7 @@
                 <div class="container-fluid">
                     <div class="header-wrap">
                         <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
-                        </form>
+                            </form>
                         <div class="header-button">
 
                             <div class="account-wrap">
@@ -303,14 +299,15 @@
                                     <strong style="font-size: 25PX">THÊM SẢN PHẨM</strong>
                                 </div>
                                 <div class="card-body card-block">
-                                    <form:form method="POST" modelAttribute="productChild" action="/save-product"
+                                    <form:form  id="Myform" method="POST" modelAttribute="productChild" action="/save-product"
                                                class="form-horizontal" name="user">
                                         <div class="row form-group">
                                             <div class="col col-md-3">
                                                 <label for="idName" class=" form-control-label">Mã sản phẩm:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <form:input path="idName" id="idName"/>
+                                                <form:input path="idName" id="idName" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="idName_error"></p>
                                             </div>
                                         </div>
                                         <div class="row form-group">
@@ -318,7 +315,8 @@
                                                 <label for="name" class=" form-control-label">Tên sản phẩm</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <form:input path="name" id="name"/>
+                                                <form:input path="name" id="name" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="name_error"></p>
                                             </div>
                                         </div>
                                         <div class="row form-group">
@@ -326,17 +324,17 @@
                                                 <label for="gia" class=" form-control-label">Giá</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <form:input path="gia" id="gia"/>
-
+                                                <form:input path="gia" id="gia" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="gia_error"></p>
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="hangSx" class=" form-control-label">Hãng</label>
+                                                <label for="hangSx" class=" form-control-label" >Hãng</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <form:input path="hangSx" id="hangSx"/>
-
+                                                <form:input path="hangSx" id="hangSx" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="hangSx_error"></p>
                                             </div>
                                         </div>
                                         <div class="row form-group">
@@ -344,7 +342,8 @@
                                                 <label for="moTa" class=" form-control-label">Mô tả:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <form:input path="moTa" id="moTa"/>
+                                                <form:input path="moTa" id="moTa" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="moTa_error"></p>
                                             </div>
                                         </div>
 
@@ -353,28 +352,18 @@
                                                 <label for="trangThai" class=" form-control-label">Trạng thái:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <form:input path="trangThai" id="trangThai"/>
+                                                <form:input path="trangThai" id="trangThai" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="trangThai_error"></p>
                                             </div>
                                         </div>
 
 
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label for="file-input" class=" form-control-label">Chọn ảnh:</label>
-                                            </div>
-                                            <div class="col-12 col-md-9">
-                                                <input type="file" id="file-input" name="file-input"
-                                                       class="form-control-file">
-                                            </div>
-                                        </div>
+
                                         <%--                                        <input type="submit" value="Update" style="background: #0f9d58; color: white; height: 20px; width: 30px; padding: 8px" />"--%>
                                         <%--                                        <a href="/userList">User List</a>--%>
                                         <div class="card-footer" style="font-size: 25PX;text-align: center">
-                                            <button type="submit" class="btn btn-primary btn-sm" href="/">
+                                            <button type="submit" onclick="return validate()" class="btn btn-primary btn-sm" href="/">
                                                 <i class="fa fa-dot-circle-o"></i> Thêm
-                                            </button>
-                                            <button type="reset" class="btn btn-danger btn-sm">
-                                                <i class="fa fa-ban"></i> Danh sách sản phẩm
                                             </button>
                                         </div>
                                     </form:form>
@@ -398,6 +387,58 @@
 
 </div>
 
+<script>
+    // Lấy giá trị của một input
+    function getValue(id){
+        return document.getElementById(id).value.trim();
+    }
+
+    // Hiển thị lỗi
+    function showError(key, mess){
+        document.getElementById(key + '_error').innerHTML = mess;
+    }
+
+    function validate() {
+        var flag = true;
+
+        // 1 maSP
+        var idName = getValue('idName');
+        if (idName == '' || idName.length < 3 || !/^[a-zA-Z0-9]+$/.test(idName)){
+            flag = false;
+            showError('idName', 'Vui lòng kiểm tra lại mã sản phẩm');
+        }
+
+        var name = getValue('name');
+        if (name == '' || teSP.length < 20 || !/^[a-zA-Z0-9]+$/.test(name)){
+            flag = false;
+            showError('idName', 'Vui lòng kiểm tra lại tên  sản phẩm');
+        }
+
+
+        // 3. hãng
+        var hang = getValue('hangSx');
+        if (hang != '' &&  /^[0-9]{10}$/.test(hang)){
+            flag = false;
+            showError('phone', 'Vui lòng kiểm tra lại hãng sản xuất');
+        }
+
+        // // 4. Email
+        // var email = getValue('email');
+        // var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        // if (!mailformat.test(email)){
+        //     flag = false;
+        //
+        //     showError('phone', 'Vui lòng kiểm tra lại Email');
+        // }
+        var gia = getValue('gia');
+        if (hang != '' &&  !/^[0-9]{10}$/.test(gia)){
+            flag = false;
+            showError('phone', 'Vui lòng kiểm tra lại giá ');
+        }
+        return flag;
+        
+    }
+</script>
 <!-- Jquery JS-->
 <script src="vendor/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap JS-->
