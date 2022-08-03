@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service("userService")
+@Service
 public class UserServiceImp implements UserService {
     @Autowired
     private UserRepository userRepository;
@@ -24,6 +24,11 @@ public class UserServiceImp implements UserService {
     @Override
     public User saveUser(User user) {
         return userRepository.save(user);
+    }
+
+    @Override
+    public void createOrUpdateEmployee(User user) {
+         userRepository.save(user);
     }
 
     // Lấy ra danh sách user từ database

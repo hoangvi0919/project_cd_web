@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="stag" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,18 +69,6 @@
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tags"></i>Sản phẩm khuyến mãi</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
-                                </li>
-                                <li>
-                                    <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
                                 <i class="far fa-copy"></i>Đơn hàng</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
@@ -86,18 +76,6 @@
                                 </li>
                                 <li>
                                     <a href="add_order"><i class="fas fa-plus-circle"></i>Thêm đơn hàng</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-home"></i>Nhà cung cấp</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục nhà cung cấp</a>
-                                </li>
-                                <li>
-                                    <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm nhà cung cấp</a>
                                 </li>
                             </ul>
                         </li>
@@ -272,7 +250,8 @@
                                                     <td>${u.address}</td>
                                                     <td>${u.gender}</td>
 
-                                                   <td><a href="/editUser?id=${u.id}"><button style="background: #1d78cb;border: 5px; color: white; padding: 5px">Edit</button></a></td>
+                                                   <td>
+                                                       <a href="/editUser?id=${u.id}"><button style="background: #1d78cb;border: 5px; color: white; padding: 5px">Edit</button></a></td>
                                                     <td>
                                                         <form action="/deleteUser?id=${u.id}" method="post">
                                                             <input type="submit" value="Delete"  style="background: red ;border: 5px; color: white; padding: 5px;cursor: pointer;"/>

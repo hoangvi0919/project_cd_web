@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +8,7 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
 
     <!-- Title Page-->
     <title>Sửa User</title>
@@ -21,7 +23,7 @@
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-<%--    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">--%>
+    <%--    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">--%>
     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
     <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
     <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
@@ -42,7 +44,7 @@
             <div class="container-fluid">
                 <div class="header-mobile-inner">
                     <a class="logo" href="thongke_manage">
-                        <img src="images/icon/logo.png" alt="CoolAdmin" />
+                        <img src="images/icon/logo.png" alt="CoolAdmin"/>
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -60,71 +62,18 @@
                             <i class="fas fa-tachometer-alt"></i>Thống kê</a>
 
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="/productList">
                             <i class="fas fa-tags"></i>Sản phẩm</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="product_manage"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
-                            </li>
-
-                            <li>
-                                <a href="add_product"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-tags"></i>Sản phẩm khuyến mãi</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-
-                            <li>
-                                <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
-                            </li>
-                            <li>
-                                <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="order_manage">
                             <i class="far fa-copy"></i>Đơn hàng</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="order_manage"><i class="fas fa-list-ul"></i>Danh mục đơn hàng</a>
-                            </li>
-                            <li>
-                                <a href="add_order"><i class="fas fa-plus-circle"></i>Thêm đơn hàng</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-home"></i>Nhà sản xuất</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục nhà sản xuất</a>
-                            </li>
-                            <li>
-                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm nhà sản xuất</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
                             <i class="fas fa-user"></i>Người dùng</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
-                            </li>
-                            <li>
-                                <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
-                            </li>
-                        </ul>
                     </li>
-                    <li>
-                        <a href="banner_manage">
-                            <i class="fas fa-calendar-alt"></i>Quản lí banner</a>
-                    </li>
+
                 </ul>
             </div>
         </nav>
@@ -133,7 +82,7 @@
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="#">
-                <img src="images/icon/logo.png" alt="Cool Admin" />
+                <img src="images/icon/logo.png" alt="Cool Admin"/>
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">
@@ -144,30 +93,8 @@
                             <i class="fas fa-tachometer-alt"></i>Thống kê</a>
 
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="/productList">
                             <i class="fas fa-tags"></i>Sản phẩm</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="product_manage"><i class="fas fa-list-ul"></i>Danh mục sản phẩm</a>
-                            </li>
-
-                            <li>
-                                <a href="add_product"><i class="fas fa-plus-circle"></i>Thêm sản phẩm</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-tags"></i>Sản phẩm khuyến mãi</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-
-                            <li>
-                                <a href="promotion_manage"><i class="fas fa-list-ul"></i>Danh mục khuyến mãi</a>
-                            </li>
-                            <li>
-                                <a href="add_promotion"><i class="fas fa-plus-circle"></i>Thêm khuyến mãi</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
@@ -181,42 +108,12 @@
                             </li>
                         </ul>
                     </li>
+
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-home"></i>Nhà sản xuất</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="supplier_manage"><i class="fas fa-list-ul"></i>Danh mục nhà sản xuất</a>
-                            </li>
-                            <li>
-                                <a href="add_supplier"><i class="fas fa-plus-circle"></i>Thêm nhà sản xuất</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="/userList">
                             <i class="fas fa-user"></i>Người dùng</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
-                            </li>
-                            <li>
-                                <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
-                            </li>
-                        </ul>
                     </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-newspaper"></i>Quản lí banner</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="banner_manage"><i class="fas fa-list-ul"></i><span>Danh mục banner</span></a>
-                            </li>
-                            <li>
-                                <a href="add_banner"><i class="fas fa-plus-circle"></i>Thêm banner</a>
-                            </li>
-                        </ul>
-                    </li>
+
                 </ul>
             </nav>
         </div>
@@ -232,17 +129,17 @@
                 <div class="container-fluid">
                     <div class="header-wrap">
                         <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
+<%--                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..."/>--%>
+<%--                            <button class="au-btn--submit" type="submit">--%>
+<%--                                <i class="zmdi zmdi-search"></i>--%>
+<%--                            </button>--%>
                         </form>
                         <div class="header-button">
 
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe"/>
                                     </div>
                                     <div class="content">
                                         <a class="js-acc-btn" href="#">Ana Nguyễn</a>
@@ -251,7 +148,7 @@
                                         <div class="info clearfix">
                                             <div class="image">
                                                 <a href="#">
-                                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                    <img src="images/icon/avatar-01.jpg" alt="John Doe"/>
                                                 </a>
                                             </div>
                                             <div class="content">
@@ -295,79 +192,70 @@
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
                     <div class="row">
-
                         <div class="col-lg-10" style="margin: auto">
                             <div class="card">
-                                <div class="card-header"  style="text-align: center">
+                                <div class="card-header" style="text-align: center">
                                     <strong style="font-size: 25PX;text-align: center">Sửa USER</strong>
                                 </div>
                                 <div class="card-body card-block">
-                                    <form action="" method="post" class="form-horizontal">
+                                    <form:form method="POST" modelAttribute="user" action="/saveU"
+                                               class="form-horizontal" name="user">
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="hf-username" class=" form-control-label">Tên đăng nhập:</label>
+                                                <label for="username" class=" form-control-label">Tên đăng nhập:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="email" id="hf-username" value="Nguyễn Văn Sa" name="hf-username" placeholder="Nhập tên..." class="form-control">
+                                                <form:input path="username" id="username"/>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3">
+                                                <label for="password" class=" form-control-label">Password</label>
+                                            </div>
+                                            <div class="col-12 col-md-9">
+                                                <form:input path="password" id="password"/>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3">
+                                                <label for="email" class=" form-control-label">Email</label>
+                                            </div>
+                                            <div class="col-12 col-md-9">
+                                                <form:input path="email" id="email"/>
 
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="hf-password" class=" form-control-label">Password</label>
+                                                <label for="phone" class=" form-control-label"
+                                                       title="Số điện thoại">SĐT</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="password" id="hf-password" value="123456" name="hf-password" placeholder="Nhập Password..." class="form-control">
+                                                <form:input path="phone" id="phone"/>
 
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="hf-password2" class=" form-control-label">Password</label>
+                                                <label for="address" class=" form-control-label">Địa chỉ:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="password" id="hf-password2" value="123456" name="hf-password2" placeholder="Nhập lại Password..." class="form-control">
+                                                <form:input path="address" id="address"/>
+
 
                                             </div>
                                         </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label for="hf-email" class=" form-control-label">Email</label>
-                                            </div>
-                                            <div class="col-12 col-md-9">
-                                                <input type="email" id="hf-email" value="nguyenvansa512@gmail.com" name="hf-email" placeholder="Nhập Email..." class="form-control">
 
-                                            </div>
-                                        </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="hf-phone" class=" form-control-label" title="Số điện thoại">SĐT</label>
+                                                <label for="type" class=" form-control-label">Quyền:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="text" id="hf-phone" value="0128.521.603" name="hf-phone" placeholder="Nhập SĐT..." class="form-control">
+                                                <form:input path="type" id="type"/>
+                                            </div>
+                                        </div>
 
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label for="hf-address" class=" form-control-label">Địa chỉ:</label>
-                                            </div>
-                                            <div class="col-12 col-md-9">
-                                                <input type="text" id="hf-address" value="Số 123, 3-2, Quận 3, TPHCM" name="hf-email" placeholder="Nhập địa chỉ..." class="form-control">
 
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label for="select" class=" form-control-label">Quyền hạn:</label>
-                                            </div>
-                                            <div class="col-12 col-md-9">
-                                                <select name="select" id="select" class="form-control">
-                                                    <option value="0">Admin</option>
-                                                    <option selected= "selected" value="1">User</option>
-                                                </select>
-                                            </div>
-                                        </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
                                                 <label for="file-input" class=" form-control-label">Chọn ảnh:</label>
@@ -377,16 +265,19 @@
                                                        class="form-control-file">
                                             </div>
                                         </div>
-                                    </form>
+<%--                                        <input type="submit" value="Update" style="background: #0f9d58; color: white; height: 20px; width: 30px; padding: 8px" />"--%>
+<%--                                        <a href="/userList">User List</a>--%>
+                                        <div class="card-footer" style="font-size: 25PX;text-align: center">
+                                            <button type="submit" class="btn btn-primary btn-sm" >
+                                                <i class="fa fa-dot-circle-o"></i> Lưu
+                                            </button>
+                                            <button type="reset" class="btn btn-danger btn-sm" href="/userList">
+                                                <i class="fa fa-ban"></i> Danh sách User
+                                            </button>
+                                        </div>
+                                    </form:form>
                                 </div>
-                                <div class="card-footer" style="font-size: 25PX;text-align: center">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Lưu
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Hủy
-                                    </button>
-                                </div>
+
                             </div>
 
                         </div>

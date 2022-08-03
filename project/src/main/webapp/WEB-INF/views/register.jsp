@@ -70,7 +70,6 @@
             <div class="login-logo">
 
                 <img src="images/logo1.png" alt="laptopnlu">
-
             </div>
             <form action="/save-user" method="post" class="registerform"  >
                 <div class="input" id="duser">
@@ -97,6 +96,7 @@
                 <div class="input">
                     <input type="text" id="email" name="email" value="${user.email}">
                     <div class="placeholder" id="place-email" >Email</div>
+                    <p id="email_err"></p>
                 </div>
                 <div class="input">
                     <textarea id="txtaddress" oninput="auto_grow(this)" name="address" value="${user.address}"></textarea>
@@ -114,7 +114,7 @@
     </div>
 </div>
 <script>
-    
+    $(document).ready()
 </script>
 <!-- Footer -->
 <jsp:include page="footer.jsp"></jsp:include>

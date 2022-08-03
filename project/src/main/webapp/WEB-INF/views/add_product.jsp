@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +29,7 @@
     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
@@ -233,11 +234,7 @@
                 <div class="container-fluid">
                     <div class="header-wrap">
                         <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Tìm kiếm..." />
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
-                        </form>
+                            </form>
                         <div class="header-button">
 
                             <div class="account-wrap">
@@ -296,542 +293,80 @@
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
                     <div class="row">
-
                         <div class="col-lg-10" style="margin: auto">
                             <div class="card">
                                 <div class="card-header" style="text-align: center">
                                     <strong style="font-size: 25PX">THÊM SẢN PHẨM</strong>
                                 </div>
                                 <div class="card-body card-block">
-                                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                        <div>
-                                            <h4> 1) Thông tin sản phẩm:</h4>
-                                            <br/>
-                                        </div>
+                                    <form:form  id="Myform" method="POST" modelAttribute="productChild" action="/save-product"
+                                               class="form-horizontal" name="user">
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="text-input" class=" form-control-label">Mã SP:</label>
+                                                <label for="idName" class=" form-control-label">Mã sản phẩm:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="text" id="text-input" name="text-input" placeholder="Nhập mã sản phẩm..."
-                                                       class="form-control">
+                                                <form:input path="idName" id="idName" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="idName_error"></p>
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="text-input1" class=" form-control-label">Tên SP:</label>
+                                                <label for="name" class=" form-control-label">Tên sản phẩm</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="text" id="text-input1" name="text-input"
-                                                       placeholder="Nhập tên sản phẩm..." class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="row form-group ">
-                                            <div class=" row col-lg-8">
-                                                <div class="col-lg-5 col-md-3">
-                                                    <label for="price-input" class=" form-control-label">Giá:</label>
-                                                </div>
-                                                <div class="col-lg-7 col-md-9">
-                                                    <input type="text" id="price-input" name="price-input"
-                                                           placeholder="xx.000.000" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class=" row col-lg-4">
-                                                <div class="col-lg-5 col-md-2">
-                                                    <label for="SL-input" class=" form-control-label">Số lượng:</label>
-                                                </div>
-                                                <div class="col-lg-5 col-md-2">
-                                                    <input type="text" id="SL-input" name="SL-input" placeholder="1"
-                                                           class="form-control">
-                                                </div>
+                                                <form:input path="name" id="name" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="name_error"></p>
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="brand-input" class=" form-control-label">Nhãn hiệu:</label>
+                                                <label for="gia" class=" form-control-label">Giá</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="text" id="brand-input" name="brand-input"
-                                                       placeholder="ASUS" class="form-control">
-
+                                                <form:input path="gia" id="gia" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="gia_error"></p>
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="date-input" class=" form-control-label">Ngày nhập:</label>
+                                                <label for="hangSx" class=" form-control-label" >Hãng</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="date" id="date-input" name="date-input" placeholder=""
-                                                       class="form-control">
-
+                                                <form:input path="hangSx" id="hangSx" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="hangSx_error"></p>
                                             </div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="bh-input" class=" form-control-label">Thời gian bảo
-                                                    hành:</label>
+                                                <label for="moTa" class=" form-control-label">Mô tả:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="text" id="bh-input" name="bh-input" placeholder="?? tháng"
-                                                       class="form-control">
-
+                                                <form:input path="moTa" id="moTa" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="moTa_error"></p>
                                             </div>
                                         </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label for="textarea-input" class=" form-control-label">Mô tả:</label>
-                                            </div>
-                                            <div class="col-12 col-md-9">
-                                                <textarea name="textarea-input" id="textarea-input" rows="4"
-                                                          placeholder="Mô tả của bạn..." class="form-control"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label for="textarea-input" class=" form-control-label">Thời điểm ra mắt:</label>
-                                            </div>
-                                            <div class="col-12 col-md-9">
-                                                <input type="text" id="tg-input" name="tg-input" placeholder=""
-                                                       class="form-control">
-
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label for="select" class=" form-control-label">Tình trạng:</label>
-                                            </div>
-                                            <div class="col-12 col-md-9">
-                                                <select name="select" id="select" class="form-control">
-                                                    <option value="0">Còn hàng</option>
-                                                    <option value="1">Hết hàng</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h4> 2) Cấu hình sản phẩm:</h4>
-                                            <br/>
-                                        </div>
-
-                                        <!--  CPU -->
-
-                                        <div>
-                                            <h4> CPU:</h4>
-                                            <br/>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="cpu-input" class=" form-control-label">Công nghệ:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="cpu-input" name="cpu-input" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="memory-input" class=" form-control-label">Loại:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="memory-input" name="memory-input" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="minor-input" class=" form-control-label">Tốc độ:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="minor-input" name="minor-input" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="dohoa-input" class=" form-control-label">Tốc độ tối đa:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="dohoa-input" name="dohoa-input" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <!--  Bộ nhớ -->
-                                        <hr/>
-                                        <div>
-                                            <h4> Bộ nhớ:</h4>
-                                            <br/>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="memory-input1" class=" form-control-label">Dung lượng RAM:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="memory-input1" name="memory-input1" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="memory-input2" class=" form-control-label">Hỗ trợ RAM tối đa:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="memory-input2" name="memory-input2" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="memory-input3" class=" form-control-label">Loại:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="memory-input3" name="memory-input3" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="memory-input4" class=" form-control-label">Tốc độ bus:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="memory-input4" name="memory-input4" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="memory-input5" class=" form-control-label">Ổ cứng:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="memory-input5" name="memory-input5" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--  Màn hình -->
-                                        <hr/>
-                                        <div>
-                                            <h4> Màn hình:</h4>
-                                            <br/>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="monitor-input" class=" form-control-label">Kích thước:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="monitor-input" name="monitor-input" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="monitor-input1" class=" form-control-label">Độ phân giải:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="monitor-input1" name="monitor-input1" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="monitor-input2" class=" form-control-label">Công nghệ:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="monitor-input2" name="monitor-input2" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="monitor-input3" class=" form-control-label">Cảm ứng:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="monitor-input3" name="monitor-input3" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--  Card đồ họa -->
-                                        <hr/>
-                                        <div>
-                                            <h4> Đồ họa, âm thanh:</h4>
-                                            <br/>
-                                        </div>
-
-                                        <div class="row form-group">
-                                            <div class="row col-lg-4">
-                                                <div class="col col-md-5">
-                                                    <label for="card-input3" class=" form-control-label">Tên:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="card-input3" name="card-input3" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-4">
-                                                <div class="col col-md-5">
-                                                    <label for="memory-input4" class=" form-control-label">Loại:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="card-input4" name="card-input4" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-4">
-                                                <div class="col col-md-5">
-                                                    <label for="memory-input5" class=" form-control-label">CN âm thanh:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="card-input5" name="card-input5" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!--  Cổng kết nối & tính năng mở rộng: -->
-                                        <hr/>
-                                        <div>
-                                            <h4> Cổng kết nối & tính năng mở rộng:</h4>
-                                            <br/>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="connect-input1" class=" form-control-label">Cổng giao tiếp:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="connect-input1" name="connect-input1" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="connect-input2" class=" form-control-label">Kết nối không dây:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="connect-input2" name="connect-input2" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="connect-input11" class=" form-control-label">Khe đọc thẻ nhớ:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="connect-input11" name="connect-input11" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="connect-input22" class=" form-control-label">Ổ đĩa quang:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="connect-input22" name="connect-input22" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="connect-input3" class=" form-control-label">Webcam:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="connect-input3" name="connect-input3" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="connect-input4" class=" form-control-label">Tính năng khác:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="connect-input4" name="connect-input4" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="connect-input5" class=" form-control-label">Đèn bàn phím:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="connect-input5" name="connect-input5" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <!--  Pin & Adapter sạc -->
-                                        <hr/>
-                                        <div>
-                                            <h4> Pin & Adapter sạc:</h4>
-                                            <br/>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="pin-input" class=" form-control-label">Loại:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="pin-input" name="pin-input" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="pin-input1" class=" form-control-label">Thông tin PIN:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="pin-input1" name="pin-input1" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!--  Hệ điều hành -->
-                                        <hr/>
-                                        <div>
-                                            <h4> Hệ điều hành:</h4>
-                                            <br/>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="hdh-input" class=" form-control-label">Loại:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="hdh-input" name="hdh-input" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <!--  Kích thước & trọng lượng -->
-                                        <hr/>
-                                        <div>
-                                            <h4> Kích thước & trọng lượng:</h4>
-                                            <br/>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-12">
-                                                <div class="col col-md-2" style="margin-right: 30px">
-                                                    <label for="size-input" class=" form-control-label">Kích thước:</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="size-input" name="size-input" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="size-input1" class=" form-control-label">Trọng lượng:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="size-input1" name="size-input1" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                            <div class="row col-lg-6">
-                                                <div class="col col-md-5">
-                                                    <label for="size-input2" class=" form-control-label">Chất liệu:</label>
-                                                </div>
-                                                <div class="col-12 col-md-7">
-                                                    <input type="text" id="size-input2" name="size-input2" placeholder=""
-                                                           class="form-control">
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div>
-                                            <h4> 3) Hình ảnh sản phẩm:</h4>
-                                            <br/>
-                                        </div>
-
 
                                         <div class="row form-group">
                                             <div class="col col-md-3">
-                                                <label for="file-input" class=" form-control-label">Chọn ảnh chính:</label>
+                                                <label for="trangThai" class=" form-control-label">Trạng thái:</label>
                                             </div>
                                             <div class="col-12 col-md-9">
-                                                <input type="file" id="file-input" name="file-input"
-                                                       class="form-control-file">
+                                                <form:input path="trangThai" id="trangThai" cssStyle="border:1px solid #0c72c1"/>
+                                                <p id="trangThai_error"></p>
                                             </div>
                                         </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3">
-                                                <label for="file-multiple-input" class=" form-control-label">Chọn ảnh phụ (chọn 5 ảnh):</label>
-                                            </div>
-                                            <div class="col-12 col-md-9">
-                                                <input type="file" id="file-multiple-input" name="file-multiple-input"
-                                                       multiple="" value="" class="form-control-file">
-                                            </div>
+
+
+
+                                        <%--                                        <input type="submit" value="Update" style="background: #0f9d58; color: white; height: 20px; width: 30px; padding: 8px" />"--%>
+                                        <%--                                        <a href="/userList">User List</a>--%>
+                                        <div class="card-footer" style="font-size: 25PX;text-align: center">
+                                            <button type="submit" onclick="return validate()" class="btn btn-primary btn-sm" href="/">
+                                                <i class="fa fa-dot-circle-o"></i> Thêm
+                                            </button>
                                         </div>
-                                    </form>
-                                </div>
-                                <div class="card-footer" style="text-align: center">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Thêm SP
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Reset
-                                    </button>
+                                    </form:form>
                                 </div>
                             </div>
 
@@ -852,6 +387,58 @@
 
 </div>
 
+<script>
+    // Lấy giá trị của một input
+    function getValue(id){
+        return document.getElementById(id).value.trim();
+    }
+
+    // Hiển thị lỗi
+    function showError(key, mess){
+        document.getElementById(key + '_error').innerHTML = mess;
+    }
+
+    function validate() {
+        var flag = true;
+
+        // 1 maSP
+        var idName = getValue('idName');
+        if (idName == '' || idName.length < 3 || !/^[a-zA-Z0-9]+$/.test(idName)){
+            flag = false;
+            showError('idName', 'Vui lòng kiểm tra lại mã sản phẩm');
+        }
+
+        var name = getValue('name');
+        if (name == '' || teSP.length < 20 || !/^[a-zA-Z0-9]+$/.test(name)){
+            flag = false;
+            showError('idName', 'Vui lòng kiểm tra lại tên  sản phẩm');
+        }
+
+
+        // 3. hãng
+        var hang = getValue('hangSx');
+        if (hang != '' &&  /^[0-9]{10}$/.test(hang)){
+            flag = false;
+            showError('phone', 'Vui lòng kiểm tra lại hãng sản xuất');
+        }
+
+        // // 4. Email
+        // var email = getValue('email');
+        // var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        // if (!mailformat.test(email)){
+        //     flag = false;
+        //
+        //     showError('phone', 'Vui lòng kiểm tra lại Email');
+        // }
+        var gia = getValue('gia');
+        if (hang != '' &&  !/^[0-9]{10}$/.test(gia)){
+            flag = false;
+            showError('phone', 'Vui lòng kiểm tra lại giá ');
+        }
+        return flag;
+        
+    }
+</script>
 <!-- Jquery JS-->
 <script src="vendor/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap JS-->
