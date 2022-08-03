@@ -72,7 +72,7 @@
                 <img src="images/logo1.png" alt="laptopnlu">
             </div>
             <form action="/save-user" method="post" class="registerform"  >
-                <div class="input">
+                <div class="input" id="duser">
                     <input type="text" id="user" name="username" value="${user.username}">
                     <div class="placeholder" id="place-user" >Tên đăng nhập</div>
                 </div>
