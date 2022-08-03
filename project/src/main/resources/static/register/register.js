@@ -26,6 +26,12 @@ $(document).ready(function() {
         });
     });
 
+    // $("#form input, #form textarea").each(function (){
+    //     $(this).keyup(function (){
+    //         validForm();
+    //     });
+    // });
+
     $("#form input[type='radio']+label").each(function() {
         $(this).click(function() {
             showValidate($("#form input[type='radio']+label"), true);
@@ -33,6 +39,16 @@ $(document).ready(function() {
     });
 
 });
+
+function disableSubmitBtn() {
+    var submitBtn = document.getElementById("btndk");
+    submitBtn.disabled = "disabled";
+}
+
+function enableSubmitBtn() {
+    var submitBtn = document.getElementById("btndk");
+    submitBtn.removeAttribute("disabled");
+}
 
 function auto_grow(element) {
     element.style.height = "100px";
@@ -56,13 +72,14 @@ function validForm() {
             showValidate($("#form input[type='radio']+label"), false);
         });
     }
+
     return check;
 }
 
 function validate(input) {
     var id = $(input).attr("id");
     var value = $(input).val();
-
+    const dateRegex = /^(?=\d)(?:(?:31(?!.(?:0?[2469]|11))|(?:30|29)(?!.0?2)|29(?=.0?2.(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(?:\x20|$))|(?:2[0-8]|1\d|0?[1-9]))([/])(?:1[012]|0?[1-9])\1(?:1[6-9]|[2-9]\d)?\d\d(?:(?=\x20\d)\x20|$))?(((0?[1-9]|1[012])(:[0-5]\d){0,2}(\x20[AP]M))|([01]\d|2[0-3])(:[0-5]\d){1,2})?$/;
     switch (id) {
         case "user":
             return (value.length > 0) ? true : false;
@@ -79,40 +96,50 @@ function validate(input) {
         case "txtaddress":
             return (value.length > 1) ? true : false;
         case "datepicker":
-            return (value.length != 0) ? true : false;
+            return dateRegex.test(value);
     }
 }
 
 function showValidate(input, valid) {
     if (valid == true)
         $(input).css("background-color", "aliceblue");
-    else
+    else{
         $(input).css("background-color", "mistyrose");
+    }
+
 }
 
 $(function() {
     $("#place-name").click(function() {
         $("#name").focus();
+        validForm();
     });
     $("#place-phone").click(function() {
         $("#phone").focus();
+        validForm();
     });
     $("#place-email").click(function() {
         $("#email").focus();
+        validForm();
     });
     $("#place-datepicker").click(function() {
         $("#datepicker").focus();
+        validForm();
     });
     $("#place-user").click(function() {
         $("#user").focus();
+        validForm();
     });
     $("#place-pass").click(function() {
         $("#pass").focus();
+        validForm();
     });
     $("#place-repass").click(function() {
         $("#repass").focus();
+        validForm();
     });
     $("#place-txtaddress").click(function() {
         $("#txtaddress").focus();
+        validForm();
     });
 });

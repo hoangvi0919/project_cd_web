@@ -14,5 +14,9 @@ public interface UserService {
     public User editUser(Long id);
 
     public void deleteUser(Long id);
+
+    boolean existsByUsername(String username);
+
+    void save(User user);
 }
 //

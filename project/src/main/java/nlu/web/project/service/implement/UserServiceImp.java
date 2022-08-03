@@ -18,7 +18,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public User findUserByUsername(String username) {
-        return (User) userRepository.findByUsername(username);
+        return userRepository.findByUsername(username);
     }
 
     @Override
@@ -44,6 +44,16 @@ public class UserServiceImp implements UserService {
     @Override
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
+    }
+
+    @Override
+    public boolean existsByUsername(String username) {
+        return userRepository.existsByUsername(username);
+    }
+
+    @Override
+    public void save(User user) {
+        userRepository.save(user);
     }
 
 
