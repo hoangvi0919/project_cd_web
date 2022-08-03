@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,16 +112,8 @@
                         </ul>
                     </li>
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="<c:url value="/userList"/> ">
                             <i class="fas fa-user"></i>Người dùng</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="user_manage"><i class="fas fa-list-ul"></i><span>Danh mục người dùng</span></a>
-                            </li>
-                            <li>
-                                <a href="add_user"><i class="fas fa-plus-circle"></i>Thêm admin</a>
-                            </li>
-                        </ul>
                     </li>
                     <li>
                         <a href="banner_manage">
@@ -301,6 +294,7 @@
                                 <div class="card-body card-block">
                                     <form:form  id="Myform" method="POST" modelAttribute="productChild" action="/save-product"
                                                class="form-horizontal" name="user">
+
                                         <div class="row form-group">
                                             <div class="col col-md-3">
                                                 <label for="idName" class=" form-control-label">Mã sản phẩm:</label>
@@ -356,17 +350,13 @@
                                                 <p id="trangThai_error"></p>
                                             </div>
                                         </div>
-
-
-
-                                        <%--                                        <input type="submit" value="Update" style="background: #0f9d58; color: white; height: 20px; width: 30px; padding: 8px" />"--%>
-                                        <%--                                        <a href="/userList">User List</a>--%>
                                         <div class="card-footer" style="font-size: 25PX;text-align: center">
                                             <button type="submit" onclick="return validate()" class="btn btn-primary btn-sm" href="/">
                                                 <i class="fa fa-dot-circle-o"></i> Thêm
                                             </button>
                                         </div>
                                     </form:form>
+                                    <p id="al_error" style="color: red"></p>
                                 </div>
                             </div>
 
@@ -403,23 +393,31 @@
 
         // 1 maSP
         var idName = getValue('idName');
-        if (idName == '' || idName.length < 3 || !/^[a-zA-Z0-9]+$/.test(idName)){
+        var name = getValue('name');
+        var hang = getValue('hangSx');
+        var gia = getValue('gia');
+
+        if(idName=='' && name=='' && hang=='' && gia==''){
+            flag = false;
+            showError('al', 'Vui lòng nhập đầy đủ thông tin!');
+        }else {
+
+        if (idName == '' || idName.length < 6 || !/^[a-zA-Z0-9]+$/.test(idName)){
             flag = false;
             showError('idName', 'Vui lòng kiểm tra lại mã sản phẩm');
         }
 
-        var name = getValue('name');
         if (name == '' || teSP.length < 20 || !/^[a-zA-Z0-9]+$/.test(name)){
             flag = false;
-            showError('idName', 'Vui lòng kiểm tra lại tên  sản phẩm');
+            showError('name', 'Vui lòng kiểm tra lại tên  sản phẩm');
         }
 
 
         // 3. hãng
-        var hang = getValue('hangSx');
+
         if (hang != '' &&  /^[0-9]{10}$/.test(hang)){
             flag = false;
-            showError('phone', 'Vui lòng kiểm tra lại hãng sản xuất');
+            showError('hangSx', 'Vui lòng kiểm tra lại hãng sản xuất');
         }
 
         // // 4. Email
@@ -430,11 +428,11 @@
         //
         //     showError('phone', 'Vui lòng kiểm tra lại Email');
         // }
-        var gia = getValue('gia');
-        if (hang != '' &&  !/^[0-9]{10}$/.test(gia)){
+
+        if (gia != '' &&  !/^[0-9]{10}$/.test(gia)){
             flag = false;
-            showError('phone', 'Vui lòng kiểm tra lại giá ');
-        }
+            showError('gia', 'Vui lòng kiểm tra lại giá ');
+        }}
         return flag;
         
     }
